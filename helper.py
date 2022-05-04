@@ -4,19 +4,15 @@ def addDict(key,value,dictionary={}):
     else:
         dictionary[key] = [value]
     
-def sort(d):
-    from operator import itemgetter
+def sort_sequence_id(d):
     for v in d.values():
-        v.sort(key=itemgetter(1))
-
+        v.sort()
     a = sorted(d.items())      
     ans = {}
-
     for i in range(len(a)):
         k = a[i][0]
         count = 0
-        for stop,stop_seq in a[i][1]:
-            stop_seq = count
-            addDict(k,(stop, stop_seq),ans)
+        for stop in a[i][1]:
+            addDict(k,stop,ans)
             count+=1
     return ans
