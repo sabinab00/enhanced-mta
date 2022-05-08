@@ -36,11 +36,16 @@ def get_nearby_stops(API_key, loc, rad=100):
         #value: [List of walking directions]
     #starting - {stop name : (geo_code, step number)}
     #ending - {stop name : (geo_code, step number)}
+#takes API_key (str), origin (list(latitude, longitude)), and destination (list(latitude, longitude))
+#returns a dictionary of walking instructions, start transit stop, end transit stop
+    #walking_dir - key: step number
+        #value: [List of walking directions]
+    #starting - {stop name : (geo_code, step number)}
+    #ending - {stop name : (geo_code, step number)}
 def get_directions(API_key,origin,destination):
     transit_stops=[]
     walking=dict()
     count=0
-    transit_mode=str()
     final_directions=dict()
     
     gmap=googlemaps.Client(key=API_key)
@@ -52,14 +57,16 @@ def get_directions(API_key,origin,destination):
             count+=1
             transit_stops.append((i["transit_details"]["arrival_stop"]["name"],list(i["transit_details"]["arrival_stop"]["location"].values()),count))
             transit_stops.append((i["transit_details"]["departure_stop"]["name"],list(i["transit_details"]["departure_stop"]["location"].values()),count))
-            transit_mode="transit"
         if i["travel_mode"]=="WALKING":
             st=[]
             count+=1
             for ii in i['steps']:
-                st.append(ii["html_instructions"])
+                if 'html_instructions' in ii.keys():
+                    st.append(ii["html_instructions"])
+                    walking[f"{count}"]=st
+                else:
+                    st.append(f"Walk for {ii['distance']['text']}")
             walking[f"{count}"]=st
-            transit_mode="walking"
 
     final_directions["walking_dir"]=walking
     final_directions["starting"]={transit_stops[0][0]: (transit_stops[0][1],transit_stops[0][2])}
