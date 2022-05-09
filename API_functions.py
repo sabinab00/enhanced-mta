@@ -1,25 +1,32 @@
 import googlemaps
 
-#takes in API_key (str) and address (str)
-#requires Google API key
+try:
+    file = open('key.txt')
+    api_key = file.readline()
+    file.close()
+    
+except:
+    print('No API Key detected')
+gmaps = googlemaps.Client(key=api_key)
+
+
+#takes address (str)
 #address format: 'building number street name, town, state
 #returns a list [latitude,longitude]
-def get_geocode(API_key, address):
-    gmaps=googlemaps.Client(key=API_key)
+def get_geocode(address):
     response=gmaps.geocode(address)
     geo_code=list(response[0]["geometry"]["location"].values())
 
     return geo_code
 
 
-#takes in API_key (str), geocode (list(latitude, longitude)), and radius (int)
+#takes in  geocode (list(latitude, longitude)), and radius (int)
 #returns a dictionary of nearby stops in a radius of 100 meters
     #key: stop name
     #value: ["type of transit",[latitude,longitude]]
-def get_nearby_stops(API_key, loc, rad=100):
-    gmap=googlemaps.Client(key=API_key)
-    subways=gmap.places_nearby(location=loc,radius=rad,type='subway_station')
-    buses=gmap.places_nearby(location=loc,radius=rad,type='bus_station')
+def get_nearby_stops(loc, rad=100):
+    subways= gmaps.places_nearby(location=loc,radius=rad,type='subway_station')
+    buses= gmaps.places_nearby(location=loc,radius=rad,type='bus_station')
     nearby_stops=dict()
     
     for stop in subways['results']:
@@ -30,7 +37,7 @@ def get_nearby_stops(API_key, loc, rad=100):
     return nearby_stops
 
 
-#takes API_key (str), origin (list(latitude, longitude)), and destination (list(latitude, longitude))
+#takes origin (list(latitude, longitude)), and destination (list(latitude, longitude))
 #returns a dictionary of walking instructions, start transit stop, end transit stop
     #walking_dir - key: step number
         #value: [List of walking directions]
@@ -42,14 +49,13 @@ def get_nearby_stops(API_key, loc, rad=100):
         #value: [List of walking directions]
     #starting - {stop name : (geo_code, step number)}
     #ending - {stop name : (geo_code, step number)}
-def get_directions(API_key,origin,destination):
+def get_directions(origin,destination):
     transit_stops=[]
     walking=dict()
     count=0
     final_directions=dict()
     
-    gmap=googlemaps.Client(key=API_key)
-    directions=gmap.directions(origin=origin, destination=destination,mode='transit',transit_mode=["subway","bus"])
+    directions=gmaps.directions(origin=origin, destination=destination,mode='transit',transit_mode=["subway","bus"])
 
 
     for i in directions[0]['legs'][0]['steps']:
@@ -73,3 +79,17 @@ def get_directions(API_key,origin,destination):
     final_directions["ending"]={transit_stops[-1][0]: (transit_stops[-1][1],transit_stops[-1][2])}
 
     return final_directions
+
+# returns the distance between two places in terms of transit distance
+# each location inputs are list of either string(s) or tuple(s) of geocode
+def get_distance(location1, location2):
+    mode = 'transit'
+    transit_mode = ['train']
+    distance = 0
+    if location1 != location2:
+        distance_matrix = gmaps.distance_matrix(origins=location1, destinations = location2, mode= mode, transit_mode=transit_mode)
+        rows = distance_matrix['rows'][0]
+        elements = rows['elements']
+        distance = int(elements[0]['distance']['value'])
+        
+    return distance
