@@ -64,6 +64,7 @@ class Node:
         # priority queue comparison
         # compares the heuristic between the two stops
         return self.heuristic_score < other.heuristic_score
+
     def __repr__(self):
         if not self.child:
             child = 'NA'
@@ -91,9 +92,9 @@ class Node:
 
    
 ####################################################
-subways = pd.read_csv(r'datasets\subways_idx4.csv', index_col=False)
+subways = pd.read_csv(r'datasets\subways_oneD.csv', index_col=False)
 bus = pd.read_csv(r'datasets\bus.csv', index_col=False)
-subways_transfers = r'datasets\transfers_idx4.txt'
+subways_transfers = r'datasets\transfers_oneD.txt'
 
 class Graph:
     def __init__(self):
@@ -198,17 +199,3 @@ class Graph:
         except:
             return self.stopIDs[stop]
 
-# g = Graph()
-# g.generateTransfers()
-# g.generateStops('subway',0)
-# g.generateStopNames()
-# g.generateRoutes('subway',0)
-# g.mapStopTransfers()
-# g.connectStops() 
-
-# g = Graph()
-# a = g.getStop('Canal St')
-# b = g.getStop('168 St-Washington Hts')
-# print(a)
-# print(b)
-# # print(a.child)
