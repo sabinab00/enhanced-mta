@@ -50,47 +50,39 @@ def getbusroutes(buses):
 
     #sorts lists based on distance            
     return sameroutes,diffroutes
-    
-
 
 
 #takes in (graph node,str origin address,str destination address,float radius of search)
 #returns a list of tuples (origin stop, destination stop)
     #ordered by (transfers, distance)
-def findroutes(API_key,access,origin,destination,rad=0.001):
+def findroutes(access,origin,destination,graph,rad=0.001):
     
-    #subway graph
-    s = NYCT.Graph()
-
-    #bus graph
-    b = NYCT.Graph("bus")
-
     #get geo_code of origin and destination
-    loc=ap.get_geocode(API_key,origin)
-    loc2=ap.get_geocode(API_key,destination)
+    loc=ap.get_geocode(origin)
+    loc2=ap.get_geocode(destination)
     
     #finds nearby origin stops
     originpts=[]
-    for x in s.stopIDs:
-        node=s.getStop(x)
+    for x in graph.stopIDs:
+        node=graph.getStop(x)
         new=(node,euclidean(loc,node.geocode))
         if new not in originpts:
             originpts.append(new)
-    for x in b.stopIDs:
-        node=b.getStop(x)
+    for x in graph.stopIDs:
+        node=graph.getStop(x)
         new=(node,euclidean(loc,node.geocode))
         if new not in originpts:
             originpts.append(new)
 
     #finds nearby destination stops
     destpts=[]
-    for x in s.stopIDs:
-        node=s.getStop(x)
+    for x in graph.stopIDs:
+        node=graph.getStop(x)
         new=(node,euclidean(loc2,node.geocode))
         if new not in destpts:
             destpts.append(new)
-    for x in b.stopIDs:
-        node=b.getStop(x)
+    for x in graph.stopIDs:
+        node=graph.getStop(x)
         new=(node,euclidean(loc2,node.geocode))
         if new not in destpts:
             destpts.append(new)
@@ -127,7 +119,7 @@ def findroutes(API_key,access,origin,destination,rad=0.001):
     #separates stops from same route and different route
     #(node-pair,sum of both distances,if the routes are in the same color group F if yes, T if no,express: if none are express 2, if one is express 1, if both are express 0)
     samesub,diffsub = getsubwayroutes(subways)
-    samebus,diffbus=getbusroutes(buses)
+    samebus,diffbus = getbusroutes(buses)
 
     #sorts same routes by distance
     sameroutes=samesub+samebus
@@ -139,38 +131,18 @@ def findroutes(API_key,access,origin,destination,rad=0.001):
     diffroutes=[]
     diffsub.sort(key=lambda x:(x[2],x[1],x[3]))
     diffbus.sort(key=lambda x:(x[1]))
-    for s in diffsub:
-        for b in diffbus:
-            if b[1]>s[1] and s not in diffroutes:
-                diffroutes.append(s)
-            elif b[1]<=s[1] and b not in diffroutes:
-                diffroutes.append(b)
+    for graph in diffsub:
+        for graph in diffbus:
+            if graph[1]>graph[1] and graph not in diffroutes:
+                diffroutes.append(graph)
+            elif graph[1]<=graph[1] and graph not in diffroutes:
+                diffroutes.append(graph)
 
     #mixed mode sorted by distance
     mixedmode.sort(key=lambda x:(x[1]))
-            
     
-    return sameroutes+diffroutes+mixedmode
-        
-
-
-
-##uploading key
-#f=open("key.txt")
-#API_key=f.read()
-#f.close()
-
-##origin point and destination point
-#access="Y"
-#start="4 South St Space 2, New York, NY 10004"
-#end="85 Greenwich St, New York, NY 10006"
-#rad=0.002
-
-
-##calls function
-#f=findroutes(API_key,access,start,end,rad)
-
-##prints notes
-#for t in f:
-    #print(f"{t[0][0].stop_name} to {t[0][1].stop_name} : {t[0][0].route_id} to {t[0][1].route_id}")
-    #print(f"{t[0][0].stop_name} to {t[0][1].stop_name} and {t[1]}")
+    # combines all modes together and sorts by distance
+    allmodes = sameroutes+diffroutes+mixedmode
+    allmodes.sort(key=lambda x:(x[1]))   
+    
+    return allmodes
