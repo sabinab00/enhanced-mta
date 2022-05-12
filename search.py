@@ -4,98 +4,106 @@ from NYCT import Graph, Node
 from queue import PriorityQueue
 import API_functions
 
-# takes geocode of origin and destination and
-# calls the gmap API for the distance between the two points
+
 def distance(curr_stop: tuple, destination:tuple):
     '''
-    curr_stop: geocode (lat, lon)
-    destination: geocode (lat,lon)
+    takes geocode of origin and destination and
+    calls the gmap API for the distance between the two points
     '''
     distance = API_functions.get_distance([curr_stop], [destination])
     return distance
 
-def euclidean_distance(curr_stop: tuple,destination):
+def euclidean_distance(curr_stop: tuple,destination:tuple):
+    '''
+    checks euclidean distance of the two stops 
+    given two geocodes
+    '''
     from scipy.spatial import distance
     return distance.euclidean(curr_stop,destination)
 
 def route_check(curr_stop:Node, destination:Node):
-    heuristic = 1
+    ''' 
+    Checks the following between the current stop and desination stop:
+      - the same route_id 
+      - if the neigboring stops that are reachable from curr stop has the same route_id as well
+    '''
+    heuristic = 0
     if curr_stop.route_id == destination.route_id:
-        heuristic -= .2
-    if destination.transfers_id:
-        if curr_stop.stop_id in destination.transfers_id:
-            heuristic -= 0.05
+        # checks for the same route id
+        heuristic +=0.001
+    if curr_stop.route_id in destination.line:
+        # checks for same line because routes in the same line
+        # mostly shares the same stops
+        heuristic += .025
 
-    # checks for its neighboring stop as well 
-    nbdh = expand(curr_stop)
-    for n in nbdh:
-        if n.route_id == destination.route_id:
-            heuristic -=0.1
-
+    # checking neighborhood leads to going backwards so don't really want that
+    # nbdh = expand(curr_stop)
+    # for n in nbdh:
+    #     # if n.route_id == destination.route_id:
+    #     if n.route_id in destination.line:
+    #         heuristic += 0.01
     return heuristic
+def express_check(curr_stop:Node):
+    '''
+    Checks if the route taken at the current stop is express or not
+    
+    '''
+    express = curr_stop.express
+    return 0.001 if express else 0
 
 
-def heuristic(curr_stop, destination):
-    # if two stops have the same line
+def heuristic(curr_stop: Node, destination: Node):
+    '''
+    Calculate heuristics for each stop. Current heuristics include:
+    - `route_check`
+    - `euclidean_distance`
+     
+    '''
     line_heuristic  = route_check(curr_stop, destination)
     distance_heuristic = euclidean_distance(curr_stop.geocode, destination.geocode)
+    express_heuristic = express_check(curr_stop)
 
-    return distance_heuristic*line_heuristic
-
-
-
-# class NodePath():
-#     def __init__(self, curr:Node=None, prev:Node = None, next: Node = None):
-#         self.curr = curr
-#         self.prev = prev 
-#         self.next = next
-    
-#     def getPath(self):
-#         node = self
-#         while node:
-#             if node.prev:
-#                 print(node.prev)
-#             node = node.prev
+    return distance_heuristic-line_heuristic-express_heuristic
 
 
 def expand(stop: Node):
-    # returns the next stop in the sequence as well as 
-    # the stops that you can transfer fro herem
+    '''
+    Returns a list of the neighboring stops of the current stop, 
+    i.e. the stop before, after and stops user is able to transfer to.
+    '''
+    # returns the previous and next stop 
+    # as well as the transfers available from the current stop
     children = []
     if stop.child:
         children.append(stop.child)
-        # if stop.child.transfers:
-        #     for transfer in stop.child.transfers:
-        #         children.append(transfer)
     if stop.parent:
         children.append(stop.parent)
-        
     if stop.transfers:
         for transfer in stop.transfers:
-            children.append(transfer)
-            
+            children.append(transfer)     
     return children    
 
 def ast(origin: Node, destination: Node):
-    # traverses through curr_stop but path information is stored in NodePath 
+    '''
+    Implements A* search between two stops
+    returns the path user should take
+    '''
     curr_stop = origin
-    
 
     h = heuristic(curr_stop, destination)
     curr_stop.heuristic_score = h
-    # path.heuristic_score = h
 
     frontier = PriorityQueue()
     reached = set()
 
     frontier.put((curr_stop.heuristic_score, curr_stop))
     reached.add(curr_stop.stop_id)
-    count = 0
+    # count = 0
 
     prev_stop = curr_stop
     path = []
     neighborhood = {}
-    # curr_node_path = NodePath(curr=prev_stop,prev=None)
+
 
     while not frontier.empty():
         
@@ -115,6 +123,9 @@ def ast(origin: Node, destination: Node):
 
 
             curr_stop = candidate_stop
+            # if len(path) >1:
+            #     if curr_stop.isSame(path[-1]):
+            #         path.pop(-1)
             path.append(curr_stop)
             print('____________________')
             print(f'curr at {curr_stop}')
@@ -143,13 +154,6 @@ def ast(origin: Node, destination: Node):
                         frontier.put((h, neighbor))
                         
                         print(f'just discovered {h}: {neigh_id} {neighbor.stop_name} {neighbor.route_id} {neighbor.transfers_id}')   
-            # curr_node_path = NodePath(curr = curr_stop, prev = prev_stop)
             prev_stop = curr_stop
-
-        
-g = Graph()
-origin = g.getStop('60')
-destination = b = g.getStop('267')
-ast(origin, destination)
 
 
