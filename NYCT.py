@@ -54,21 +54,6 @@ class Node:
             
         return same_trans
 
-    # def getPath(self,origin):
-    #     # need to consider different routes
-    #     node, hist = self, []
-    #     same = False
-    #     while node:
-    #         if same:
-    #             break
-    #         same = node.isSame(origin)
-    #         # print(node.stop_id, origin.stop_id)
-    #         hist.append(node)
-    #         node = node.parent
-            
-    #     hist.reverse()
-    #     solution = [node.stop_name for node in hist]
-    #     return solution
 
     def __lt__(self, other):
         # priority queue comparison
@@ -96,8 +81,6 @@ class Node:
             exp= 'EXPRESS'
        
         return f'StopID: {self.stop_id}-{self.stop_name} \nRoute: {self.route_id}-{self.line} {exp} Seq:{self.stop_sequence} Transfers: {self.transfers_id} \nPrev: {par}-{par_id} \t Next: {child}-{child_id} \nOther: {self.accessibility}, {self.precinct}  \n\n'
-
-    
 
     def setStopSeq(self, new_sequence):
         self.stop_sequence = new_sequence
@@ -213,6 +196,7 @@ class Graph:
                     for v in key[1:]:
                         helper.addDict(prefix+str(key[0]),prefix+str(v),self.transfers)
         
+        # updates self.transfer with multi-modal transfers
         trans = bus2sub if mode=='bus' else sub2bus
         with open(trans) as file:
             for line in file:
@@ -242,16 +226,3 @@ class Graph:
             return self.stopNames[stop]
         except:
             return self.stopIDs[stop]
-
-    # def connectTransportModes(self,mode):
-    #     m = bus2sub if mode=='bus' else sub2bus
-    #     with open(m) as file:
-    #         for line in file:
-    #             key= line.rstrip().split(',')
-    #             if len(key) != 1:
-    #                 for v in key[1:]:
-    #                     helper.addDict(key[0],v,self.transfers)
-    #     pass
-
-# g = Graph()
-# print(g.getStop('0'))
