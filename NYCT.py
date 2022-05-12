@@ -109,21 +109,26 @@ subways = pd.read_csv(r'datasets\subways_oneD.csv', index_col=False)
 bus = pd.read_csv(r'datasets\bus_oneD.csv', index_col=False)
 bus_transfers = r'datasets\bus_transfers_oneD.txt'
 subways_transfers = r'datasets\transfers_oneD.txt'
+bus2sub = r'datasets\bus2sub.txt'
+sub2bus = r'datasets\sub2bus.txt'
 
 class Graph:
-    def __init__(self, mode='subway'):
+    def __init__(self):
+
         self.transfers = {}
         self.stopIDs = {}
         self.uptown = {}
         self.downtown = {}
         self.routes = {}
 
-        self.generateTransfers(mode)
-        self.generateStops(mode)
-        self.generateStopNames()
-        self.generateRoutes(mode)
-        self.mapStopTransfers()
-        self.connectStops() 
+        mode = ['subway','bus']
+        for m in mode:
+            self.generateTransfers(m)
+            self.generateStops(m)
+            self.generateStopNames()
+            self.generateRoutes(m)
+            self.mapStopTransfers()
+            self.connectStops() 
 
 
     def generateStops(self,mode):  
@@ -136,15 +141,17 @@ class Graph:
             _stop_name = line['stop_name']
             _stop_lat = line['stop_lat']
             _stop_lon = line['stop_lon']
-            _stop_id = str(line['stop_id'])
+           
             _precinct = line['precinct']
             _express = line['express']
             if mode=='bus':
                 _accessibility = 1
                 _notes = ""
+                _stop_id = 'B'+str(line['stop_id'])
             else:
                 _accessibility = line['ADA'] 
                 _notes = line['ADA Notes']
+                _stop_id = 'S'+str(line['stop_id'])
         
             if str(_stop_id) in self.transfers.keys():
                 transfers = self.transfers[str(_stop_id)]
@@ -167,7 +174,11 @@ class Graph:
         for i in range(len(m)):
             line = m.iloc[i]
             route_id = line['route_id']
-            stop_id = str(line['stop_id'])
+            stop_id = line['stop_id']
+            if mode == 'bus':
+                stop_id = 'B'+str(stop_id)
+            else:
+                stop_id = 'S'+str(stop_id)
             if self.stopIDs[stop_id].route_id == route_id:
                 helper.addDict(route_id, self.stopIDs[stop_id], routes)    
         
@@ -194,11 +205,21 @@ class Graph:
         # creates a dictionary between stop_ids where you 
         # can change/transfer from
         m = bus_transfers if mode=='bus' else subways_transfers
+        prefix='B' if mode=='bus' else 'S'
         with open(m) as file:
             for line in file:
                 key= line.rstrip().split(',')
                 if len(key) != 1:
-                    self.transfers[key[0]] = key[1:]
+                    for v in key[1:]:
+                        helper.addDict(prefix+str(key[0]),prefix+str(v),self.transfers)
+        
+        trans = bus2sub if mode=='bus' else sub2bus
+        with open(trans) as file:
+            for line in file:
+                key= line.rstrip().split(',')
+                if len(key) != 1:
+                    for v in key[1:]:
+                        helper.addDict(key[0],v,self.transfers)
         
 
     def mapStopTransfers(self):
@@ -221,6 +242,16 @@ class Graph:
             return self.stopNames[stop]
         except:
             return self.stopIDs[stop]
+
+    # def connectTransportModes(self,mode):
+    #     m = bus2sub if mode=='bus' else sub2bus
+    #     with open(m) as file:
+    #         for line in file:
+    #             key= line.rstrip().split(',')
+    #             if len(key) != 1:
+    #                 for v in key[1:]:
+    #                     helper.addDict(key[0],v,self.transfers)
+    #     pass
 
 # g = Graph()
 # print(g.getStop('0'))
