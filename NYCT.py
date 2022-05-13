@@ -1,6 +1,7 @@
 import pandas as pd
 from copy import deepcopy
 import helper 
+import findendpoints
 
 class Node:
     def __init__(self, stop_id, stop_name, stop_sequence, route_id, transit_type,express,transfers,stop_lat, stop_lon, accessibility, notes=None,precinct=None,parent=None, child=None):
@@ -50,8 +51,12 @@ class Node:
                 
                 if (this_transfers == other_transfers) or (this_transfers.remove(other.stop_id) == other_transfers.remove(self.stop_id)):
                     same_trans = True
-                    
-            
+        
+        # checks if the stops have different transit_type, you can move between them (?)
+        if self.transit_type != other.transit_type:
+            if findendpoints.euclidean(self.geocode, other.geocode) <= 0.001:
+                same_trans = True                    
+        
         return same_trans
 
 
@@ -80,7 +85,7 @@ class Node:
         if self.express==1:
             exp= 'EXPRESS'
        
-        return f'StopID: {self.stop_id}-{self.stop_name} \nRoute: {self.route_id}-{self.line} {exp} Seq:{self.stop_sequence} Transfers: {self.transfers_id} \nPrev: {par}-{par_id} \t Next: {child}-{child_id} \nOther: {self.accessibility}, {self.precinct}  \n\n'
+        return f'StopID: {self.stop_id}-{self.stop_name} {self.route_id}-{self.line} {exp} \nPrev: {par}-{par_id} \t Next: {child}-{child_id} \nTransfers: {self.transfers_id}  \nOther: {self.accessibility}, {self.precinct}\n'
 
     def setStopSeq(self, new_sequence):
         self.stop_sequence = new_sequence
