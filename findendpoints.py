@@ -91,7 +91,7 @@ def findroutes(access,mode,origin,destination,graph,rad=0.001):
     originpts=[x for x in originpts if x[1]<=rad]
     destpts=[x for x in destpts if x[1]<=rad]
     if len(originpts)==0 or len(destpts)==0:
-        print("Radius is too small")
+        print(f"Radius {rad} is too small")
         return []
 
     if access=="Y" or access=="y":
