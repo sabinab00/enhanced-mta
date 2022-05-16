@@ -9,9 +9,11 @@ class Node:
         self.stop_name = stop_name
         self.stop_sequence = stop_sequence
         
+        
+        self.transit_type = transit_type
+
         self.route_id = route_id
         self.line = self.setLine()
-        self.transit_type = transit_type
         self.express = express
         self.transfers =transfers
         self.transfers_id = deepcopy(transfers)
@@ -25,18 +27,40 @@ class Node:
         self.child = child
 
         self.heuristic_score = None
+        self.n_transfer_route = 0
+        self.n_transfer_mode = 0
 
     def setLine(self):
         # maps route_id to which line it is in
-        possible_lines = ['123','456','7','ACE','BDFM','NQRW','JZ','L','GS']
-        for i in range(len(possible_lines)):
-            for j in possible_lines[i]:
-                if self.route_id == j:
-                    return possible_lines[i]
+        possible_lines_subway = ['123','456','7','ACE','BDFM','NQRW','JZ','L','GS']
+        if self.transit_type=='subway':
+            for i in range(len(possible_lines_subway)):
+                for j in possible_lines_subway[i]:
+                    if self.route_id == j:
+                        return possible_lines_subway[i]
+        possible_lines_bus = ['M15','M14','M34']
+        if self.transit_type=='bus':
+            for line in possible_lines_bus:
+                route = self.route_id[:3]
+                if route==line:
+                    return line
+                else:
+                    return self.route_id
+                # return route if line!=route else line
+                            
             
-
     def setHeuristicScore(self, value):
         self.heuristic_score = value
+
+    def updateNTransfers(self, other):
+        # updates number of transfers between the current stop and the previous sotp
+        self.n_transfer_route = other.n_transfer_route
+        self.n_transfer_mode = other.n_transfer_mode
+        if self.route_id != other.route_id:
+            self.n_transfer_route+=1
+            
+        if self.transit_type != other.transit_type:
+            self.n_transfer_mode +=1
 
     def isSame(self, other):      
         # two stops are the same if they have the same transfers or you can transfer bewteen them
@@ -64,8 +88,8 @@ class Node:
         # priority queue comparison
         # compares the heuristic between the two stops
         # TODO maybe can modify to check crime cluster!!
-        
-        return self.heuristic_score < other.heuristic_score
+        return self.n_transfer_mode+self.n_transfer_route*2 < other.n_transfer_mode+other.n_transfer_route*2
+        # return self.heuristic_score < other.heuristic_score
 
     def __repr__(self):
         # string representation
@@ -85,7 +109,7 @@ class Node:
         if self.express==1:
             exp= 'EXPRESS'
        
-        return f'StopID: {self.stop_id}-{self.stop_name} {self.route_id}-{self.line} {exp} \nPrev: {par}-{par_id} \t Next: {child}-{child_id} \nTransfers: {self.transfers_id}  \nOther: {self.accessibility}, {self.precinct}\n'
+        return f'StopID: {self.stop_id}-{self.stop_name} {self.route_id}-{self.line}-{self.transit_type} {exp} \nPrev: {par}-{par_id} \t Next: {child}-{child_id} \nTransfers: {self.transfers_id}  \nOther: {self.accessibility}, {self.precinct}\n'
 
     def setStopSeq(self, new_sequence):
         self.stop_sequence = new_sequence
@@ -105,8 +129,6 @@ class Graph:
 
         self.transfers = {}
         self.stopIDs = {}
-        self.uptown = {}
-        self.downtown = {}
         self.routes = {}
 
         mode = ['subway','bus']
@@ -231,3 +253,10 @@ class Graph:
             return self.stopNames[stop]
         except:
             return self.stopIDs[stop]
+
+    def restartTransferCount(self):
+        # used when a new search commences, this fucntion resets the number of transfers for all nodes
+        # in the directories
+        for stop in self.stopIDs:
+            self.stopIDs[stop].n_transfer_route = 0
+            self.stopIDs[stop].n_transfer_mode = 0
