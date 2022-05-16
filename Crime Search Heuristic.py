@@ -24,11 +24,11 @@ crime
 
 
 #checks to see if given geocode matches with crime geocode
-code = '(40.77950599700006, -73.95558550399994)'
-for i in crime.Geocode:
-    if code == i:
-        print("not safe")
-        break
+#code = '(40.77950599700006, -73.95558550399994)'
+#for i in crime.Geocode:
+ #   if code == i:
+  #      print("not safe")
+   #     break
 
 
 # In[ ]:
