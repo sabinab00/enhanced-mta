@@ -19,3 +19,10 @@ def sort(routes):
             v.setStopSeq(count)
             count+=1
     return new
+
+def findTopPath(paths):
+    # sorted_paths = sorted(paths, key=lambda x:[ len(x[0]),x[2],x[1]])
+    sorted_paths = sorted(paths, key=lambda x:[x[2],len(x[0]),x[1]])
+
+    return sorted_paths
+
