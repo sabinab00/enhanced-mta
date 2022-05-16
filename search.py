@@ -14,6 +14,7 @@ def distance(curr_stop: tuple, destination:tuple):
     return distance
 
 def transit_mode_check(curr_stop: Node, destination:Node):
+    '''checks if the current and destination'stop are for the same transit type'''
     return 0.005 if curr_stop.transit_type == destination.transit_type else 0
 
 def euclidean_distance(curr_stop: tuple,destination:tuple):
@@ -41,11 +42,11 @@ def route_check(curr_stop:Node, destination:Node):
             heuristic += .0025
 
     # checking neighborhood leads to going backwards so don't really want that
-    # nbdh = expand(curr_stop)
-    # for n in nbdh:
-    #     # if n.route_id == destination.route_id:
-    #     if n.route_id in destination.line:
-    #         heuristic += 0.01
+    nbdh = expand(curr_stop)
+    for n in nbdh:
+        if destination.line:
+            if n.route_id in destination.line:
+                heuristic += 0.0001
     return heuristic
 def express_check(curr_stop:Node):
     '''
@@ -53,38 +54,35 @@ def express_check(curr_stop:Node):
     
     '''
     express = curr_stop.express
-    return 0.001 if express else 0
+    return 0 if express else 0.001
 
-def transfer_check(prev_stop:Node, curr_stop: Node):
-    h = 0
-    if prev_stop.route_id == curr_stop.route_id:
-        h+=0.001
-
-    if prev_stop.line:
-        if curr_stop.route_id in prev_stop.line:
-            h +=0.0005  
-    return h
+def transfer_check(curr_stop: Node):
+    '''penalizes transfers route and modal transfers'''
+    h = curr_stop.n_transfer_route*3 + 2*curr_stop.n_transfer_mode
+    return h*0.0005
     
 
-def heuristic(prev_stop: Node, curr_stop: Node, destination: Node, accessibility):
+def heuristic(curr_stop: Node, destination: Node, accessibility):
     '''
     Calculate heuristics for each stop. Current heuristics include:
     - `route_check`
     - `euclidean_distance`
-     
+    - `express_check`
+    - `transit_mode_check`
+    - `transfer_check`
     '''
     line_heuristic  = route_check(curr_stop, destination)
     distance_heuristic = euclidean_distance(curr_stop.geocode, destination.geocode)
     express_heuristic = express_check(curr_stop)
     transit_type = transit_mode_check(curr_stop, destination)
-    access_heuristic =0
-    transfer_heuristic = transfer_check(prev_stop, curr_stop)
+    access_heuristic = 0
+    transfer_heuristic = transfer_check(curr_stop)
 
     if accessibility == 'Y' or accessibility == 'y':
         if curr_stop.transit_type == 'bus' or (curr_stop.transit_type == 'subway' and curr_stop.accessibility !=0):
             access_heuristic = 0.001
 
-    return distance_heuristic-line_heuristic-express_heuristic-transit_type- access_heuristic - transfer_heuristic
+    return distance_heuristic-line_heuristic-express_heuristic-transit_type- access_heuristic + transfer_heuristic
 
 
 def expand(stop: Node):
@@ -126,12 +124,13 @@ def ast(origin: Node, destination: Node, accessibility='N'):
     Implements A* search between two stops
     returns the path user should take
     '''
-    
+        
     curr_stop = origin
     prev_stop = curr_stop
+
     prev_stop_path = Path(curr_stop = prev_stop)
 
-    h = heuristic(prev_stop, curr_stop, destination,accessibility)
+    h = heuristic(curr_stop, destination,accessibility)
     curr_stop.heuristic_score = h
 
     frontier = PriorityQueue()
@@ -139,24 +138,16 @@ def ast(origin: Node, destination: Node, accessibility='N'):
 
     frontier.put((curr_stop.heuristic_score, curr_stop))
     reached.add(curr_stop.stop_id)
-    # count = 0
 
-    
-    path = []
     neighborhood = {}
 
 
-    while not frontier.empty():
-        
+    while not frontier.empty():    
         candidate_stop = frontier.get()[1]
-        # print('____________________')
-        # print(f'prev stop at H={prev_stop.heuristic_score} {prev_stop.stop_name} {prev_stop.route_id}')
-        # print(f'prev stop neighborhood: {neighborhood[prev_stop.stop_id] if prev_stop.stop_id in neighborhood.keys() else False}')
-        # print(f'candidate at H={candidate_stop.heuristic_score} {candidate_stop} ')
-
+        
         transferrable = True 
         if accessibility == 'y' or accessibility =='Y':
-            transferrable = checkModalTransfer(prev_stop, curr_stop)
+            transferrable = checkModalTransfer(prev_stop, candidate_stop)
 
         if ((candidate_stop.route_id == prev_stop.route_id) \
              or (candidate_stop.stop_id in neighborhood[prev_stop.stop_id] if prev_stop.stop_id in neighborhood.keys() else False) if prev_stop.stop_id!=origin.stop_id else True)\
@@ -164,36 +155,28 @@ def ast(origin: Node, destination: Node, accessibility='N'):
             # you can only move forward if with this candidate if:
                 # it runs on the same line as the previous stop 
                 # OR you can transfer from the previous to this station 
-                # OR this stop is a transfer or the child of the previous stop
-
-            
-
+                # OR this stop is a transfer or the child of the previous stop           
             curr_stop = candidate_stop
-
+            curr_stop.updateNTransfers(prev_stop)
+            
             curr_stop_path = Path(curr_stop=curr_stop, prev_stop=prev_stop_path)
-            # if len(path) >1:
-            #     if curr_stop.isSame(path[-1]):
-            #         path.pop(-1)
-
-            path.append(curr_stop)
-            # print('____________________')
-            # print(f'curr at {curr_stop}')
-            # print('____________________')
-
-
+            
             if curr_stop.isSame(destination):
-                # curr_node_path.getPath()
-                print('REACHED!')
+                                # print('REACHED!')
                 # for stop in path:
                 #     print(stop.stop_name, stop.route_id)
-                    
-                # print([(node.stop_name, node.route_id) for node in path])
-                solution = prev_stop_path.getPath()
-                for stop in solution:
-                    print(stop)
                 
-                break            
+                solution = curr_stop_path.getPath()
+               
+                # print(f'Path has {curr_stop.n_transfer_route} route transfers')
+                # print(f'Path has {curr_stop.n_transfer_mode} modal transfers')
 
+                return (solution,curr_stop.n_transfer_route,curr_stop.n_transfer_mode)  
+                           
+
+            # expands the current node to its immediate neighbors
+            # the next and previous stop on the route, the stations (both subway and bus) transferrable
+            # from the current stop
             neighbors = expand(curr_stop)
             
 
@@ -201,14 +184,20 @@ def ast(origin: Node, destination: Node, accessibility='N'):
                 neighborhood[curr_stop.stop_id] = [i.stop_id for i in neighbors]
                 for neighbor in neighbors:
                     neigh_id = neighbor.stop_id
+                    neighbor.updateNTransfers(prev_stop)
+                    
+                    # if the stop is not yet in the stack
+                    # calculate the heuristic and add it to stack
                     if neigh_id not in reached:
-                        h = heuristic(prev_stop, neighbor, destination,accessibility)
+                        h = heuristic(neighbor, destination,accessibility)
                         neighbor.setHeuristicScore(h)
                         reached.add(neigh_id)
                         frontier.put((h, neighbor))
                         
-                        # print(f'just discovered {h}: {neigh_id} {neighbor.stop_name} {neighbor.route_id} {neighbor.transfers_id}')   
+            
             prev_stop = curr_stop
             prev_stop_path = curr_stop_path
+    
+    return None
 
 
