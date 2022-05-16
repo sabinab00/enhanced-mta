@@ -1,52 +1,79 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[14]:
-
-
+import matplotlib.pyplot as plt
+import seaborn as sns
+sns.set()
+from sklearn.cluster import KMeans
 import pandas as pd
-crime = pd.read_csv(r'NYPD dataset.csv', index_col=False)
+from kneed import KneeLocator
 
-#preprocessing 
-crime = crime[crime.BORO_NM != 'BRONX']
-crime = crime[crime.BORO_NM != 'BROOKLYN']
-crime = crime[crime.BORO_NM != 'QUEENS']
-crime = crime[crime.BORO_NM != 'STATEN ISLAND']
-crime = crime.dropna()
-
-#rename to geocode
-crime = crime.rename(columns = {'Lat_Lon':'Geocode'})
-crime
+# checks distance from crime cluster center to given geocode
+#clusters based on longitude and latitude
 
 
+# #plot of crime count by lat, long 
+# plt.scatter(crime['Longitude'],crime['Latitude'])
 
-# In[33]:
+# plt.xlim(-74.04,-73.9)
+# plt.ylim(40.65,40.9)
+# plt.show()
+
+def cluster(crime):
+    x = crime.iloc[:,8:10] # 1t for rows and second for columns
+
+    # fitting kmeans to predict for dataset
+    kmeans = KMeans(5)
+    kmeans.fit(x)
+
+    clusters = kmeans.fit_predict(x)
+
+    # clusters
+    wcss=[]
+    for i in range(1,10):
+        kmeans = KMeans(i)
+        kmeans.fit(x)
+        wcss_iter = kmeans.inertia_
+        wcss.append(wcss_iter)
+
+    # #determine # of clusters using elbow method
+
+    k1 = KneeLocator(range(1, 10), wcss, curve="convex", direction="decreasing")
+    # print("number of clusters: ", k1.elbow)
+
+    #plot of clusters using k = 3 as # of clusters
+    kmeans = KMeans(3)
+    kmeans.fit(x)
+    clusters = kmeans.fit_predict(x)
+
+    data_with_clusters = crime.copy()
+    data_with_clusters['Clusters'] = clusters 
+    # plt.scatter(data_with_clusters['Longitude'],data_with_clusters['Latitude'],c=data_with_clusters['Clusters'],cmap='autumn')
+
+    #count per cluster
+
+    # cluster_labels = kmeans.fit_predict(x)
+    # cluster_counts = Counter(cluster_labels)
+
+    # print("count per cluster", cluster_counts)
+    # #find center of each cluster
+
+    centers = kmeans.cluster_centers_
+    # print ("centers: ", centers)
+    #plt.scatter(centers[:, 0], centers[:, 1], c='black', alpha=0.5);
+
+    center_1 = centers[0]
+    center_2 = centers[1]
+    center_3 = centers[2]
 
 
-#checks to see if given geocode matches with crime geocode
-code = '(40.77950599700006, -73.95558550399994)'
-for i in crime.Geocode:
-    if code == i:
-        print("not safe")
-        break
-
-
-# In[ ]:
-
-
-def crime_check(curr_stop:Node):
-    ''' 
-    Checks if location is safe given geocode of stop
-    '''
+    return center_1, center_2, center_3
+# def distance(crime_loc_1: tuple, crime_loc_2: tuple, crime_loc_3:tuple, destination:tuple):
+#     '''
+#     takes geocode of crime cluster centers and destination to 
+#     determine the distance between the two points for each center
+#     '''
     
-    heuristic = 0
-    
-    if curr_stop.geocode == crime.Geocode:
-        # checks for the same geocode id
-        for i in crime.Geocode:
-            if code == i:
-            print("Not safe")
-            break
-        heuristic += .025
-    return heuristic
+#     distance_1 = API_functions.get_distance([crime_loc_1], [destination])
+#     distance_2 = API_functions.get_distance([crime_loc_2], [destination])
+#     distance_3 = API_functions.get_distance([crime_loc_3], [destination])
+
+#     return distance_1, distance_2, distance_3
 
