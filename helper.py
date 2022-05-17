@@ -22,7 +22,7 @@ def sort(routes):
 
 def findTopPath(paths):
     # sorted_paths = sorted(paths, key=lambda x:[ len(x[0]),x[2],x[1]])
-    sorted_paths = sorted(paths, key=lambda x:[x[2],len(x[0]),x[1]])
+    sorted_paths = sorted(paths, key=lambda x:[len(x[0]),x[1],x[2]])
 
     return sorted_paths
 
