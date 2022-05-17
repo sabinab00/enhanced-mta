@@ -2,6 +2,7 @@ import pandas as pd
 from copy import deepcopy
 import helper 
 import findendpoints
+import heuristics as he
 
 class Node:
     def __init__(self, stop_id, stop_name, stop_sequence, route_id, transit_type,express,transfers,stop_lat, stop_lon, accessibility, notes=None,precinct=None,parent=None, child=None):
@@ -26,7 +27,8 @@ class Node:
         self.parent = parent
         self.child = child
 
-        self.heuristic_score = None
+        self.crime_heuristics = he.crime_check(self)+he.crime_distance(self)
+        self.heuristic_score = self.crime_heuristics
         self.n_transfer_route = 0
         self.n_transfer_mode = 0
 
@@ -50,7 +52,7 @@ class Node:
                             
             
     def setHeuristicScore(self, value):
-        self.heuristic_score = value
+        self.heuristic_score += value
 
     def updateNTransfers(self, other):
         # updates number of transfers between the current stop and the previous sotp
@@ -117,12 +119,12 @@ class Node:
 
    
 ####################################################
-subways = pd.read_csv(r'datasets\subways_oneD.csv', index_col=False)
-bus = pd.read_csv(r'datasets\bus_oneD.csv', index_col=False)
-bus_transfers = r'datasets\bus_transfers_oneD.txt'
-subways_transfers = r'datasets\transfers_oneD.txt'
-bus2sub = r'datasets\bus2sub.txt'
-sub2bus = r'datasets\sub2bus.txt'
+subways = pd.read_csv(r'datasets/subways_oneD.csv', index_col=False)
+bus = pd.read_csv(r'datasets/bus_oneD.csv', index_col=False)
+bus_transfers = r'datasets/bus_transfers_oneD.txt'
+subways_transfers = r'datasets/transfers_oneD.txt'
+bus2sub = r'datasets/bus2sub.txt'
+sub2bus = r'datasets/sub2bus.txt'
 
 class Graph:
     def __init__(self):
