@@ -96,7 +96,7 @@ def ast(origin: Node, destination: Node, accessibility='N'):
              and transferrable:
             # you can only move forward if with this candidate if:
                 # it runs on the same line as the previous stop 
-                # OR you can transfer from the previous to this station 
+                # OR you can transfer from the previous stop to this station 
                 # OR this stop is a transfer or the child of the previous stop           
             curr_stop = candidate_stop
             curr_stop.updateNTransfers(prev_stop)
