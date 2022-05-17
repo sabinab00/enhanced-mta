@@ -50,7 +50,7 @@ NYCT.py:
       - Express: Indicates if the stop is ona local or express line
       - Heuristic_score: based on crime statistics
   - Graph:
-  - This class serves as an overall directory for the NYCT system of all the stops, permissible transfers and all routes the users can access.
+      - This class serves as an overall directory for the NYCT system of all the stops, permissible transfers and all routes the users can access.
 
 Findendpoints.py:
   - Takes in accessibility request (“y” or “n”), transportation mode request, origin address, destination address, graph object, radius or search and returns a list of tuples of two nodes (origin stop, destination stop) that are sorted by transfers and distance
@@ -80,18 +80,18 @@ Path.py:
   - Helps return the path of the optimal route returned by search.py
 
 Google Evaluation Test Sets and Functions:
-  - Googletest.txt: holds the google test sets with each line formatted as:
+  - googletest.txt: holds the google test sets with each line formatted as:
 starting_address |ending_address|start_station, end_station, stops_travelled|...|accessibility=[y,n]
-  - Googletest.py: a function that reads in googletest.txt and returns the crime heuristics, transfers, transfer_modes and path for each route in googletest.txt to a googletest-output.txt file
-  - Googletest-output.txt: results of heuristic 1 being used
-  - Googletest-output-newh.txt: results of heuristic 2 being used
-  - Googletest-output-newh2.txt: results of heuristic 3 being used
+  - googletest.py: a function that reads in googletest.txt and returns the crime heuristics, transfers, transfer_modes and path for each route in googletest.txt to a googletest-output.txt file
+  - googletest-output.txt: results of heuristic 1 being used
+  - googletest-output-newh.txt: results of heuristic 2 being used
+  - googletest-output-newh2.txt: results of heuristic 3 being used
 
 Enhanced MTA Test Sets and Functions:
-  - Tests.txt: Contains starting and ending addresses to test main.py
-  - Test.py: reads in test.txt and returns the crime heuristics, transfers, transfer_modes and path for each route in tests.txt to a test-output.txt file
-  - Test-output.txt: results for heuristic 1 being used
-  - Test-output-newh.txt: results for heuristic 2 being used
+  - tests.txt: Contains starting and ending addresses to test main.py
+  - test.py: reads in test.txt and returns the crime heuristics, transfers, transfer_modes and path for each route in tests.txt to a test-output.txt file
+  - test-output.txt: results for heuristic 1 being used
+  - test-output-newh.txt: results for heuristic 2 being used
 
 Main.py (runs the search):
   - Uses terminal input to find starting and ending addresses, accessibility request and mode of transportation request
