@@ -18,14 +18,12 @@ def heuristic(curr_stop: Node, destination: Node, accessibility):
     transit_type = he.transit_mode_check(curr_stop, destination)
     access_heuristic = 0
     transfer_heuristic = he.transfer_check(curr_stop)
-    crime_heuristic = he.crime_check(curr_stop)
-    crime_dist_heuristic = he.crime_distance(curr_stop)
 
     if accessibility == 'Y' or accessibility == 'y':
         if curr_stop.transit_type == 'bus' or (curr_stop.transit_type == 'subway' and curr_stop.accessibility !=0):
             access_heuristic = 0.001
 
-    return distance_heuristic-line_heuristic-express_heuristic-transit_type- access_heuristic + transfer_heuristic + crime_heuristic + crime_dist_heuristic
+    return distance_heuristic-line_heuristic-express_heuristic-transit_type- access_heuristic + transfer_heuristic
 
 
 
