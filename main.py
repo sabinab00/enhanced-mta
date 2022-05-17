@@ -1,36 +1,41 @@
 from NYCT import Graph, Node
-from queue import PriorityQueue
 from search import ast
 import findendpoints as fep
 import helper
 
-
-if __name__=='__main__':
+def main():
     g = Graph()
 
     #origin point and destination point
-    access = "n"
-    start = "65 Bayard St, New York, NY 10013"
-    end = "253 W 125th St, New York, NY 10027"
+
+    start = input('What is your starting address? \n>>>')
+    end = input('What is your ending address? \n>>>')
+    access = input('Would you like to request an accessible route (Y/N)? \n>>>')
+    mode = input('Do you have a preferred mode of transportion? \nEnter "bus", "subway", or "both". \n>>>')
 
     found_stops = False
     found_path = False
     rad = 0.002
     paths_found = []
 
+    print('Finding best routes for you...')
     while not found_stops or not found_path:
+        print(rad)
         # finds the starting and ending points within radius = rad of the start/end user inputs 
-        f = (fep.findroutes(access,mode='all',origin=start,destination=end,graph=g,rad=rad))
-        
+        f = (fep.findroutes(access,mode=mode,origin=start,destination=end,graph=g,rad=rad))
+        if rad >=0.005:
+            print('No paths found... sorry :( ')
+            break
+
         if len(f)>=1:
             found_stops = True
-            print('Finding best routes for you...')
+        
             for t in f:
                 g.restartTransferCount()
                 # a* search here
                 sol = ast(t[0][0],t[0][1], accessibility=access)
+                # sol returns (path, number of transered modes, number of transferred routes)
                 if sol:
-                    
                     paths_found.append(sol)
                     found_path = True
                                 
@@ -44,12 +49,20 @@ if __name__=='__main__':
     #   (1) number of modal transfers
     #   (2) number of stops passed through
     #   (3) number of route transfers
-    
-    sorted_paths  = helper.findTopPath(paths_found)
-    for path in sorted_paths[:3]:
-        print('------------')
-        p = path[0]
-        print(len(p), path[1], path[2])
-        print(p)
-    # print(len(paths_found))
+    if rad <0.005:
+        sorted_paths  = helper.findTopPath(paths_found)
+        print(f'We found {len(sorted_paths)} routes, here are the top 3:')
+        for path in sorted_paths[:3]:
+            print('------------')
+            p = path[0]
+            # print(len(p), path[1], path[2])
+            # print(p)
+            # sum = 0
+            # for i in p:
+            #     sum+=i.crime_heuristics
+            # print('crimeh:',sum)
+        # print(len(paths_found))
 
+    print(str(p))
+if __name__=='__main__':
+    main()
