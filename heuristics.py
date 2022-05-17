@@ -3,7 +3,7 @@ import API_functions
 import pandas as pd
 
 crimesearch = __import__('Crime Search Heuristic')
-crime = pd.read_csv(r'datasets\NYPD dataset.csv')
+crime = pd.read_csv(r'datasets/NYPD dataset.csv')
 # center_1, center_2, center_3 = crimesearch.cluster(crime)
 centers,radii = crimesearch.cluster(crime)
 
