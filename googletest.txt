@@ -1,8 +1,8 @@
-7 State St, New York, NY 10004|199 Chambers St, New York, NY 10007|S0,S4,3|n
 7 State St, New York, NY 10004|199 Chambers St, New York, NY 10007|B872,B878,9|y
-1901 1st Ave., New York, NY 10029|390 7th Ave, New York, NY 10001|S266,S244,7|n
+7 State St, New York, NY 10004|199 Chambers St, New York, NY 10007|S0,S4,3|n
 1901 1st Ave., New York, NY 10029|390 7th Ave, New York, NY 10001|S266,S244,7|y
-150 Central Park S, New York, NY 10019|613 W 155th St, New York, NY 10032|S23,S39,1|n
-150 Central Park S, New York, NY 10019|613 W 155th St, New York, NY 10032|B644,B595,1|y
-365 5th Ave, New York, NY 10016|1234 E 6th St, New York, NY 10009|S244,S240,3|B436,B999,10|n
+1901 1st Ave., New York, NY 10029|390 7th Ave, New York, NY 10001|S266,S244,7|n
+150 Central Park S, New York, NY 10019|613 W 155th St, New York, NY 10032|B644,B595,30|y
+150 Central Park S, New York, NY 10019|613 W 155th St, New York, NY 10032|S23,S39,12|n
 365 5th Ave, New York, NY 10016|1234 E 6th St, New York, NY 10009|S244,S240,3|B436,B999,10|y
+365 5th Ave, New York, NY 10016|1234 E 6th St, New York, NY 10009|S244,S240,3|B436,B999,10|n
