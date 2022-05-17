@@ -61,7 +61,7 @@ def express_check(curr_stop):
 def transfer_check(curr_stop):
     '''penalizes transfers route and modal transfers'''
     h = curr_stop.n_transfer_route*3 + 2*curr_stop.n_transfer_mode
-    return h*0.005
+    return h*0.001
     
 def crime_check(curr_stop):
     ''' 
