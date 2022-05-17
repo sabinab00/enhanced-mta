@@ -1,0 +1,1531 @@
++++++++++++++++++++++++++++++++++++++
+------------------------
+start:7 State St, New York, NY 10004
+end: 199 Chambers St, New York, NY 10007
+accessibility: y
+------------------------
+path0***********************
+[StopID: B873-STATE ST/BRIDGE ST M20-M20-bus LOCAL 
+Prev: STATE ST/WHITEHALL ST-B872 	 Next: BATTERY PL/WEST ST-B874 
+Transfers: ['B893', 'S63', 'S64']  
+Other: 1, 1.0
+, StopID: B874-BATTERY PL/WEST ST M20-M20-bus LOCAL 
+Prev: STATE ST/BRIDGE ST-B873 	 Next: BATTERY PL/3 PL-B875 
+Transfers: None  
+Other: 1, 1.0
+, StopID: B875-BATTERY PL/3 PL M20-M20-bus LOCAL 
+Prev: BATTERY PL/WEST ST-B874 	 Next: WEST THAMES ST/SOUTH END AV-B870 
+Transfers: None  
+Other: 1, 1.0
+, StopID: B870-WEST THAMES ST/SOUTH END AV M20-M20-bus LOCAL 
+Prev: BATTERY PL/3 PL-B875 	 Next: SOUTH END AV/ALBANY ST-B871 
+Transfers: None  
+Other: 1, 1.0
+, StopID: B871-SOUTH END AV/ALBANY ST M20-M20-bus LOCAL 
+Prev: WEST THAMES ST/SOUTH END AV-B870 	 Next: MURRAY ST/NORTH END AV-B876 
+Transfers: ['B866']  
+Other: 1, 1.0
+, StopID: B876-MURRAY ST/NORTH END AV M20-M20-bus LOCAL 
+Prev: SOUTH END AV/ALBANY ST-B871 	 Next: NORTH END AV/WARREN ST-B869 
+Transfers: None  
+Other: 1, 1.0
+, StopID: B869-NORTH END AV/WARREN ST M20-M20-bus LOCAL 
+Prev: MURRAY ST/NORTH END AV-B876 	 Next: WEST ST/CHAMBERS ST-B877 
+Transfers: ['B857']  
+Other: 1, 1.0
+]
+>>>>>> crime h = 0.0027752912877688583<<<<<<<<
+>>>>>> transfers_route 0<<<<<<<<
+>>>>>> transfers_mode 0<<<<<<<<
+>>>>>> number of stops 7<<<<<<<<
+path1***********************
+[StopID: B873-STATE ST/BRIDGE ST M20-M20-bus LOCAL 
+Prev: STATE ST/WHITEHALL ST-B872 	 Next: BATTERY PL/WEST ST-B874 
+Transfers: ['B893', 'S63', 'S64']  
+Other: 1, 1.0
+, StopID: B874-BATTERY PL/WEST ST M20-M20-bus LOCAL 
+Prev: STATE ST/BRIDGE ST-B873 	 Next: BATTERY PL/3 PL-B875 
+Transfers: None  
+Other: 1, 1.0
+, StopID: B875-BATTERY PL/3 PL M20-M20-bus LOCAL 
+Prev: BATTERY PL/WEST ST-B874 	 Next: WEST THAMES ST/SOUTH END AV-B870 
+Transfers: None  
+Other: 1, 1.0
+, StopID: B870-WEST THAMES ST/SOUTH END AV M20-M20-bus LOCAL 
+Prev: BATTERY PL/3 PL-B875 	 Next: SOUTH END AV/ALBANY ST-B871 
+Transfers: None  
+Other: 1, 1.0
+, StopID: B871-SOUTH END AV/ALBANY ST M20-M20-bus LOCAL 
+Prev: WEST THAMES ST/SOUTH END AV-B870 	 Next: MURRAY ST/NORTH END AV-B876 
+Transfers: ['B866']  
+Other: 1, 1.0
+, StopID: B876-MURRAY ST/NORTH END AV M20-M20-bus LOCAL 
+Prev: SOUTH END AV/ALBANY ST-B871 	 Next: NORTH END AV/WARREN ST-B869 
+Transfers: None  
+Other: 1, 1.0
+, StopID: B869-NORTH END AV/WARREN ST M20-M20-bus LOCAL 
+Prev: MURRAY ST/NORTH END AV-B876 	 Next: WEST ST/CHAMBERS ST-B877 
+Transfers: ['B857']  
+Other: 1, 1.0
+, StopID: B877-WEST ST/CHAMBERS ST M20-M20-bus LOCAL 
+Prev: NORTH END AV/WARREN ST-B869 	 Next: HARRISON ST/WEST ST-B878 
+Transfers: None  
+Other: 1, 1.0
+]
+>>>>>> crime h = 0.003860045129535662<<<<<<<<
+>>>>>> transfers_route 0<<<<<<<<
+>>>>>> transfers_mode 0<<<<<<<<
+>>>>>> number of stops 8<<<<<<<<
+path2***********************
+[StopID: B872-STATE ST/WHITEHALL ST M20-M20-bus LOCAL 
+Prev: NA-NA 	 Next: STATE ST/BRIDGE ST-B873 
+Transfers: ['B892', 'S0', 'S267', 'S268']  
+Other: 1, 1.0
+, StopID: B873-STATE ST/BRIDGE ST M20-M20-bus LOCAL 
+Prev: STATE ST/WHITEHALL ST-B872 	 Next: BATTERY PL/WEST ST-B874 
+Transfers: ['B893', 'S63', 'S64']  
+Other: 1, 1.0
+, StopID: B874-BATTERY PL/WEST ST M20-M20-bus LOCAL 
+Prev: STATE ST/BRIDGE ST-B873 	 Next: BATTERY PL/3 PL-B875 
+Transfers: None  
+Other: 1, 1.0
+, StopID: B875-BATTERY PL/3 PL M20-M20-bus LOCAL 
+Prev: BATTERY PL/WEST ST-B874 	 Next: WEST THAMES ST/SOUTH END AV-B870 
+Transfers: None  
+Other: 1, 1.0
+, StopID: B870-WEST THAMES ST/SOUTH END AV M20-M20-bus LOCAL 
+Prev: BATTERY PL/3 PL-B875 	 Next: SOUTH END AV/ALBANY ST-B871 
+Transfers: None  
+Other: 1, 1.0
+, StopID: B871-SOUTH END AV/ALBANY ST M20-M20-bus LOCAL 
+Prev: WEST THAMES ST/SOUTH END AV-B870 	 Next: MURRAY ST/NORTH END AV-B876 
+Transfers: ['B866']  
+Other: 1, 1.0
+, StopID: B876-MURRAY ST/NORTH END AV M20-M20-bus LOCAL 
+Prev: SOUTH END AV/ALBANY ST-B871 	 Next: NORTH END AV/WARREN ST-B869 
+Transfers: None  
+Other: 1, 1.0
+, StopID: B869-NORTH END AV/WARREN ST M20-M20-bus LOCAL 
+Prev: MURRAY ST/NORTH END AV-B876 	 Next: WEST ST/CHAMBERS ST-B877 
+Transfers: ['B857']  
+Other: 1, 1.0
+]
+>>>>>> crime h = 0.002826961017112548<<<<<<<<
+>>>>>> transfers_route 0<<<<<<<<
+>>>>>> transfers_mode 0<<<<<<<<
+>>>>>> number of stops 8<<<<<<<<
+------------------------
+start:7 State St, New York, NY 10004
+end: 199 Chambers St, New York, NY 10007
+accessibility: n
+------------------------
+path3***********************
+[StopID: B873-STATE ST/BRIDGE ST M20-M20-bus LOCAL 
+Prev: STATE ST/WHITEHALL ST-B872 	 Next: BATTERY PL/WEST ST-B874 
+Transfers: ['B893', 'S63', 'S64']  
+Other: 1, 1.0
+, StopID: B874-BATTERY PL/WEST ST M20-M20-bus LOCAL 
+Prev: STATE ST/BRIDGE ST-B873 	 Next: BATTERY PL/3 PL-B875 
+Transfers: None  
+Other: 1, 1.0
+, StopID: B875-BATTERY PL/3 PL M20-M20-bus LOCAL 
+Prev: BATTERY PL/WEST ST-B874 	 Next: WEST THAMES ST/SOUTH END AV-B870 
+Transfers: None  
+Other: 1, 1.0
+, StopID: B870-WEST THAMES ST/SOUTH END AV M20-M20-bus LOCAL 
+Prev: BATTERY PL/3 PL-B875 	 Next: SOUTH END AV/ALBANY ST-B871 
+Transfers: None  
+Other: 1, 1.0
+, StopID: B871-SOUTH END AV/ALBANY ST M20-M20-bus LOCAL 
+Prev: WEST THAMES ST/SOUTH END AV-B870 	 Next: MURRAY ST/NORTH END AV-B876 
+Transfers: ['B866']  
+Other: 1, 1.0
+, StopID: B876-MURRAY ST/NORTH END AV M20-M20-bus LOCAL 
+Prev: SOUTH END AV/ALBANY ST-B871 	 Next: NORTH END AV/WARREN ST-B869 
+Transfers: None  
+Other: 1, 1.0
+, StopID: B869-NORTH END AV/WARREN ST M20-M20-bus LOCAL 
+Prev: MURRAY ST/NORTH END AV-B876 	 Next: WEST ST/CHAMBERS ST-B877 
+Transfers: ['B857']  
+Other: 1, 1.0
+]
+>>>>>> crime h = 0.0027752912877688583<<<<<<<<
+>>>>>> transfers_route 0<<<<<<<<
+>>>>>> transfers_mode 0<<<<<<<<
+>>>>>> number of stops 7<<<<<<<<
+path4***********************
+[StopID: B873-STATE ST/BRIDGE ST M20-M20-bus LOCAL 
+Prev: STATE ST/WHITEHALL ST-B872 	 Next: BATTERY PL/WEST ST-B874 
+Transfers: ['B893', 'S63', 'S64']  
+Other: 1, 1.0
+, StopID: B874-BATTERY PL/WEST ST M20-M20-bus LOCAL 
+Prev: STATE ST/BRIDGE ST-B873 	 Next: BATTERY PL/3 PL-B875 
+Transfers: None  
+Other: 1, 1.0
+, StopID: B875-BATTERY PL/3 PL M20-M20-bus LOCAL 
+Prev: BATTERY PL/WEST ST-B874 	 Next: WEST THAMES ST/SOUTH END AV-B870 
+Transfers: None  
+Other: 1, 1.0
+, StopID: B870-WEST THAMES ST/SOUTH END AV M20-M20-bus LOCAL 
+Prev: BATTERY PL/3 PL-B875 	 Next: SOUTH END AV/ALBANY ST-B871 
+Transfers: None  
+Other: 1, 1.0
+, StopID: B871-SOUTH END AV/ALBANY ST M20-M20-bus LOCAL 
+Prev: WEST THAMES ST/SOUTH END AV-B870 	 Next: MURRAY ST/NORTH END AV-B876 
+Transfers: ['B866']  
+Other: 1, 1.0
+, StopID: B876-MURRAY ST/NORTH END AV M20-M20-bus LOCAL 
+Prev: SOUTH END AV/ALBANY ST-B871 	 Next: NORTH END AV/WARREN ST-B869 
+Transfers: None  
+Other: 1, 1.0
+, StopID: B869-NORTH END AV/WARREN ST M20-M20-bus LOCAL 
+Prev: MURRAY ST/NORTH END AV-B876 	 Next: WEST ST/CHAMBERS ST-B877 
+Transfers: ['B857']  
+Other: 1, 1.0
+, StopID: B877-WEST ST/CHAMBERS ST M20-M20-bus LOCAL 
+Prev: NORTH END AV/WARREN ST-B869 	 Next: HARRISON ST/WEST ST-B878 
+Transfers: None  
+Other: 1, 1.0
+]
+>>>>>> crime h = 0.003860045129535662<<<<<<<<
+>>>>>> transfers_route 0<<<<<<<<
+>>>>>> transfers_mode 0<<<<<<<<
+>>>>>> number of stops 8<<<<<<<<
+path5***********************
+[StopID: B872-STATE ST/WHITEHALL ST M20-M20-bus LOCAL 
+Prev: NA-NA 	 Next: STATE ST/BRIDGE ST-B873 
+Transfers: ['B892', 'S0', 'S267', 'S268']  
+Other: 1, 1.0
+, StopID: B873-STATE ST/BRIDGE ST M20-M20-bus LOCAL 
+Prev: STATE ST/WHITEHALL ST-B872 	 Next: BATTERY PL/WEST ST-B874 
+Transfers: ['B893', 'S63', 'S64']  
+Other: 1, 1.0
+, StopID: B874-BATTERY PL/WEST ST M20-M20-bus LOCAL 
+Prev: STATE ST/BRIDGE ST-B873 	 Next: BATTERY PL/3 PL-B875 
+Transfers: None  
+Other: 1, 1.0
+, StopID: B875-BATTERY PL/3 PL M20-M20-bus LOCAL 
+Prev: BATTERY PL/WEST ST-B874 	 Next: WEST THAMES ST/SOUTH END AV-B870 
+Transfers: None  
+Other: 1, 1.0
+, StopID: B870-WEST THAMES ST/SOUTH END AV M20-M20-bus LOCAL 
+Prev: BATTERY PL/3 PL-B875 	 Next: SOUTH END AV/ALBANY ST-B871 
+Transfers: None  
+Other: 1, 1.0
+, StopID: B871-SOUTH END AV/ALBANY ST M20-M20-bus LOCAL 
+Prev: WEST THAMES ST/SOUTH END AV-B870 	 Next: MURRAY ST/NORTH END AV-B876 
+Transfers: ['B866']  
+Other: 1, 1.0
+, StopID: B876-MURRAY ST/NORTH END AV M20-M20-bus LOCAL 
+Prev: SOUTH END AV/ALBANY ST-B871 	 Next: NORTH END AV/WARREN ST-B869 
+Transfers: None  
+Other: 1, 1.0
+, StopID: B869-NORTH END AV/WARREN ST M20-M20-bus LOCAL 
+Prev: MURRAY ST/NORTH END AV-B876 	 Next: WEST ST/CHAMBERS ST-B877 
+Transfers: ['B857']  
+Other: 1, 1.0
+]
+>>>>>> crime h = 0.002826961017112548<<<<<<<<
+>>>>>> transfers_route 0<<<<<<<<
+>>>>>> transfers_mode 0<<<<<<<<
+>>>>>> number of stops 8<<<<<<<<
++++++++++++++++++++++++++++++++++++++
+------------------------
+start:1901 1st Ave., New York, NY 10029
+end: 390 7th Ave, New York, NY 10001
+accessibility: y
+------------------------
+path0***********************
+[StopID: S266-96 St Q-NQRW-subway EXPRESS 
+Prev: 86 St-S265 	 Next: NA-NA 
+Transfers: ['B400']  
+Other: 1, 23.0
+, StopID: S265-86 St Q-NQRW-subway EXPRESS 
+Prev: 72 St-S264 	 Next: 96 St-S266 
+Transfers: ['B360']  
+Other: 1, 19.0
+, StopID: S264-72 St Q-NQRW-subway EXPRESS 
+Prev: Lexington Av/63 St-S222 	 Next: 86 St-S265 
+Transfers: ['B262']  
+Other: 1, 19.0
+, StopID: S222-Lexington Av/63 St Q-NQRW-subway EXPRESS 
+Prev: 57 St-7 Av-S255 	 Next: 72 St-S264 
+Transfers: ['S78', 'S79', 'S80', 'S220', 'S221', 'S261', 'S262', 'S263']  
+Other: 1, 19.0
+, StopID: S255-57 St-7 Av Q-NQRW-subway EXPRESS 
+Prev: Times Sq-42 St-S248 	 Next: Lexington Av/63 St-S222 
+Transfers: ['S254', 'S256', 'S257', 'B81', 'B97']  
+Other: 1, 18.0
+, StopID: S248-Times Sq-42 St Q-NQRW-subway EXPRESS 
+Prev: 34 St-Herald Sq-S244 	 Next: 57 St-7 Av-S255 
+Transfers: ['S19', 'S20', 'S21', 'S102', 'S106', 'S123', 'S124', 'S125', 'S247', 'S249', 'S250']  
+Other: 1, 14.0
+, StopID: S244-34 St-Herald Sq Q-NQRW-subway EXPRESS 
+Prev: 14 St-Union Sq-S240 	 Next: Times Sq-42 St-S248 
+Transfers: ['S155', 'S156', 'S157', 'S158', 'S159', 'S243', 'S245', 'S246', 'B502', 'B513', 'B530', 'B536', 'B540']  
+Other: 1, 14.0
+]
+>>>>>> crime h = 0.02021720768479535<<<<<<<<
+>>>>>> transfers_route 0<<<<<<<<
+>>>>>> transfers_mode 0<<<<<<<<
+>>>>>> number of stops 7<<<<<<<<
+------------------------
+start:1901 1st Ave., New York, NY 10029
+end: 390 7th Ave, New York, NY 10001
+accessibility: n
+------------------------
+path1***********************
+[StopID: B1116-1 AV/ E 97 ST M15+-M15-bus EXPRESS 
+Prev: 1 AV/E 86 ST-B267 	 Next: 1 AV/E 106 ST-B1117 
+Transfers: None  
+Other: 1, 23.0
+, StopID: B267-1 AV/E 86 ST M15+-M15-bus EXPRESS 
+Prev: 1 AV/E 79 ST-B266 	 Next: 1 AV/ E 97 ST-B1116 
+Transfers: ['B271']  
+Other: 1, 19.0
+, StopID: B266-1 AV/E 79 ST M15+-M15-bus EXPRESS 
+Prev: 1 AV/E 67 ST-B265 	 Next: 1 AV/E 86 ST-B267 
+Transfers: ['B270']  
+Other: 1, 19.0
+, StopID: B265-1 AV/E 67 ST M15+-M15-bus EXPRESS 
+Prev: 1 AV/E 57 ST-B173 	 Next: 1 AV/E 79 ST-B266 
+Transfers: ['B269']  
+Other: 1, 19.0
+, StopID: B173-1 AV/E 57 ST M15+-M15-bus EXPRESS 
+Prev: 1 AV/MITCHELL PL-B176 	 Next: 1 AV/E 67 ST-B265 
+Transfers: ['B166', 'B177']  
+Other: 1, 17.0
+, StopID: B176-1 AV/MITCHELL PL M15+-M15-bus EXPRESS 
+Prev: 1 AV/E 42 ST-B175 	 Next: 1 AV/E 57 ST-B173 
+Transfers: ['B180']  
+Other: 1, 17.0
+, StopID: B175-1 AV/E 42 ST M15+-M15-bus EXPRESS 
+Prev: 1 AV/E 34 ST-B174 	 Next: 1 AV/MITCHELL PL-B176 
+Transfers: ['B179']  
+Other: 1, 17.0
+, StopID: B174-1 AV/E 34 ST M15+-M15-bus EXPRESS 
+Prev: 1 AV/E 28 ST-B1036 	 Next: 1 AV/E 42 ST-B175 
+Transfers: ['B178']  
+Other: 1, 17.0
+, StopID: B1036-1 AV/E 28 ST M15+-M15-bus EXPRESS 
+Prev: 1 AV/E 25 ST-B1035 	 Next: 1 AV/E 34 ST-B174 
+Transfers: ['B1039']  
+Other: 1, 13.0
+, StopID: B1035-1 AV/E 25 ST M15+-M15-bus EXPRESS 
+Prev: 1 AV/E 14 ST-B1034 	 Next: 1 AV/E 28 ST-B1036 
+Transfers: None  
+Other: 1, 13.0
+, StopID: B1034-1 AV/E 14 ST M15+-M15-bus EXPRESS 
+Prev: 1 AV/E 1 ST-B971 	 Next: 1 AV/E 25 ST-B1035 
+Transfers: ['B1038']  
+Other: 1, 13.0
+, StopID: B971-1 AV/E 1 ST M15+-M15-bus EXPRESS 
+Prev: ALLEN ST/GRAND ST-B928 	 Next: 1 AV/E 14 ST-B1034 
+Transfers: None  
+Other: 1, 9.0
+, StopID: B928-ALLEN ST/GRAND ST M15+-M15-bus EXPRESS 
+Prev: MADISON ST/CATHERINE ST-B907 	 Next: 1 AV/E 1 ST-B971 
+Transfers: ['B929']  
+Other: 1, 7.0
+, StopID: B907-MADISON ST/CATHERINE ST M15+-M15-bus EXPRESS 
+Prev: PEARL ST/FULTON ST-B849 	 Next: ALLEN ST/GRAND ST-B928 
+Transfers: None  
+Other: 1, 5.0
+, StopID: B849-PEARL ST/FULTON ST M15+-M15-bus EXPRESS 
+Prev: WATER ST/WALL ST-B848 	 Next: MADISON ST/CATHERINE ST-B907 
+Transfers: ['B851']  
+Other: 1, 1.0
+, StopID: B848-WATER ST/WALL ST M15+-M15-bus EXPRESS 
+Prev: SOUTH FERRY/TERMINAL-B847 	 Next: PEARL ST/FULTON ST-B849 
+Transfers: ['B850']  
+Other: 1, 1.0
+, StopID: B847-SOUTH FERRY/TERMINAL M15+-M15-bus EXPRESS 
+Prev: NA-NA 	 Next: WATER ST/WALL ST-B848 
+Transfers: ['S0']  
+Other: 1, 1.0
+, StopID: S0-South Ferry 1-123-subway LOCAL 
+Prev: NA-NA 	 Next: Rector St-S1 
+Transfers: ['B847', 'B872', 'B892']  
+Other: 1, 1.0
+, StopID: S1-Rector St 1-123-subway LOCAL 
+Prev: South Ferry-S0 	 Next: WTC Cortlandt-S2 
+Transfers: None  
+Other: 0, 1.0
+, StopID: S2-WTC Cortlandt 1-123-subway LOCAL 
+Prev: Rector St-S1 	 Next: Chambers St-S3 
+Transfers: None  
+Other: 1, 1.0
+, StopID: S3-Chambers St 1-123-subway LOCAL 
+Prev: WTC Cortlandt-S2 	 Next: Franklin St-S6 
+Transfers: ['S4', 'S5', 'B859']  
+Other: 1, 1.0
+, StopID: S6-Franklin St 1-123-subway LOCAL 
+Prev: Chambers St-S3 	 Next: Canal St-S7 
+Transfers: None  
+Other: 0, 1.0
+, StopID: S7-Canal St 1-123-subway LOCAL 
+Prev: Franklin St-S6 	 Next: Houston St-S8 
+Transfers: None  
+Other: 0, 1.0
+, StopID: S8-Houston St 1-123-subway LOCAL 
+Prev: Canal St-S7 	 Next: Christopher St-Sheridan Sq-S9 
+Transfers: None  
+Other: 0, 1.0
+, StopID: S9-Christopher St-Sheridan Sq 1-123-subway LOCAL 
+Prev: Houston St-S8 	 Next: 14 St-S10 
+Transfers: ['B493']  
+Other: 0, 6.0
+, StopID: S10-14 St 1-123-subway LOCAL 
+Prev: Christopher St-Sheridan Sq-S9 	 Next: 18 St-S13 
+Transfers: ['S11', 'S12', 'S212', 'S213', 'S214', 'S235']  
+Other: 0, 6.0
+, StopID: S13-18 St 1-123-subway LOCAL 
+Prev: 14 St-S10 	 Next: 23 St-S14 
+Transfers: None  
+Other: 0, 13.0
+, StopID: S14-23 St 1-123-subway LOCAL 
+Prev: 18 St-S13 	 Next: 28 St-S15 
+Transfers: ['B1086']  
+Other: 0, 13.0
+, StopID: S15-28 St 1-123-subway LOCAL 
+Prev: 23 St-S14 	 Next: 34 St-Penn Station-S16 
+Transfers: None  
+Other: 0, 13.0
+]
+>>>>>> crime h = 0.04360334733176838<<<<<<<<
+>>>>>> transfers_route 1<<<<<<<<
+>>>>>> transfers_mode 1<<<<<<<<
+>>>>>> number of stops 29<<<<<<<<
++++++++++++++++++++++++++++++++++++++
+------------------------
+start:150 Central Park S, New York, NY 10019
+end: 613 W 155th St, New York, NY 10032
+accessibility: y
+------------------------
+path0***********************
+[StopID: B643-CENTRAL PK S/6 AV M5-M5-bus LOCAL 
+Prev: AV OF THE AMERICAS/W 57 ST-B109 	 Next: CENTRAL PK S/7 AV-B644 
+Transfers: ['B649']  
+Other: 1, 22.0
+, StopID: B644-CENTRAL PK S/7 AV M5-M5-bus LOCAL 
+Prev: CENTRAL PK S/6 AV-B643 	 Next: CENTRAL PK S/COLUMBUS CI-B645 
+Transfers: ['B650']  
+Other: 1, 22.0
+, StopID: B645-CENTRAL PK S/COLUMBUS CI M5-M5-bus LOCAL 
+Prev: CENTRAL PK S/7 AV-B644 	 Next: BROADWAY/W 61 ST-B16 
+Transfers: ['B651', 'S23', 'S126', 'S127', 'S128', 'S129']  
+Other: 1, 22.0
+, StopID: B16-BROADWAY/W 61 ST M5-M5-bus LOCAL 
+Prev: CENTRAL PK S/COLUMBUS CI-B645 	 Next: BROADWAY/W 63 ST-B17 
+Transfers: ['B30', 'B50']  
+Other: 1, 20.0
+, StopID: B17-BROADWAY/W 63 ST M5-M5-bus LOCAL 
+Prev: BROADWAY/W 61 ST-B16 	 Next: BROADWAY/W 66 ST-B18 
+Transfers: ['B31', 'B51']  
+Other: 1, 20.0
+, StopID: B18-BROADWAY/W 66 ST M5-M5-bus LOCAL 
+Prev: BROADWAY/W 63 ST-B17 	 Next: BROADWAY/W 69 ST-B19 
+Transfers: ['B32', 'B52', 'S24']  
+Other: 1, 20.0
+, StopID: B19-BROADWAY/W 69 ST M5-M5-bus LOCAL 
+Prev: BROADWAY/W 66 ST-B18 	 Next: W 72 ST/BROADWAY-B15 
+Transfers: ['B33', 'B53']  
+Other: 1, 20.0
+, StopID: B15-W 72 ST/BROADWAY M5-M5-bus LOCAL 
+Prev: BROADWAY/W 69 ST-B19 	 Next: W 72 ST/WEST END AV-B20 
+Transfers: ['B0']  
+Other: 1, 20.0
+, StopID: B20-W 72 ST/WEST END AV M5-M5-bus LOCAL 
+Prev: W 72 ST/BROADWAY-B15 	 Next: RIVERSIDE DR/W 74 ST-B21 
+Transfers: None  
+Other: 1, 20.0
+, StopID: B21-RIVERSIDE DR/W 74 ST M5-M5-bus LOCAL 
+Prev: W 72 ST/WEST END AV-B20 	 Next: RIVERSIDE DR/W 77 ST-B22 
+Transfers: None  
+Other: 1, 20.0
+, StopID: B22-RIVERSIDE DR/W 77 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 74 ST-B21 	 Next: RIVERSIDE DR/W 79 ST-B23 
+Transfers: None  
+Other: 1, 20.0
+, StopID: B23-RIVERSIDE DR/W 79 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 77 ST-B22 	 Next: RIVERSIDE DR/W 82 ST-B24 
+Transfers: None  
+Other: 1, 20.0
+, StopID: B24-RIVERSIDE DR/W 82 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 79 ST-B23 	 Next: RIVERSIDE DR/W 85 ST-B25 
+Transfers: None  
+Other: 1, 20.0
+, StopID: B25-RIVERSIDE DR/W 85 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 82 ST-B24 	 Next: RIVERSIDE DR/W 87 ST-B677 
+Transfers: None  
+Other: 1, 20.0
+, StopID: B677-RIVERSIDE DR/W 87 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 85 ST-B25 	 Next: RIVERSIDE DR/W 89 ST-B678 
+Transfers: None  
+Other: 1, 24.0
+, StopID: B678-RIVERSIDE DR/W 89 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 87 ST-B677 	 Next: RIVERSIDE DR/W 91 ST-B679 
+Transfers: None  
+Other: 1, 24.0
+, StopID: B679-RIVERSIDE DR/W 91 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 89 ST-B678 	 Next: RIVERSIDE DR/W 94 ST-B680 
+Transfers: None  
+Other: 1, 24.0
+, StopID: B680-RIVERSIDE DR/W 94 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 91 ST-B679 	 Next: RIVERSIDE DR/W 97 ST-B681 
+Transfers: None  
+Other: 1, 24.0
+, StopID: B681-RIVERSIDE DR/W 97 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 94 ST-B680 	 Next: RIVERSIDE DR/W 100 ST-B682 
+Transfers: None  
+Other: 1, 24.0
+, StopID: B682-RIVERSIDE DR/W 100 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 97 ST-B681 	 Next: RIVERSIDE DR/W 103 ST-B683 
+Transfers: None  
+Other: 1, 24.0
+, StopID: B683-RIVERSIDE DR/W 103 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 100 ST-B682 	 Next: RIVERSIDE DR/W 106 ST-B684 
+Transfers: None  
+Other: 1, 24.0
+, StopID: B684-RIVERSIDE DR/W 106 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 103 ST-B683 	 Next: RIVERSIDE DR/W 108 ST-B685 
+Transfers: None  
+Other: 1, 24.0
+, StopID: B685-RIVERSIDE DR/W 108 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 106 ST-B684 	 Next: RIVERSIDE DR/W 112 ST-B736 
+Transfers: None  
+Other: 1, 24.0
+, StopID: B736-RIVERSIDE DR/W 112 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 108 ST-B685 	 Next: RIVERSIDE DR/W 114 ST-B737 
+Transfers: None  
+Other: 1, 26.0
+, StopID: B737-RIVERSIDE DR/W 114 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 112 ST-B736 	 Next: RIVERSIDE DR/W 116 ST-B738 
+Transfers: None  
+Other: 1, 26.0
+, StopID: B738-RIVERSIDE DR/W 116 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 114 ST-B737 	 Next: RIVERSIDE DR/W 119 ST-B739 
+Transfers: None  
+Other: 1, 26.0
+, StopID: B739-RIVERSIDE DR/W 119 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 116 ST-B738 	 Next: RIVERSIDE DR/W 122 ST-B740 
+Transfers: None  
+Other: 1, 26.0
+, StopID: B740-RIVERSIDE DR/W 122 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 119 ST-B739 	 Next: RIVERSIDE DR/TIEMANN PL-B741 
+Transfers: None  
+Other: 1, 26.0
+, StopID: B741-RIVERSIDE DR/TIEMANN PL M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 122 ST-B740 	 Next: W 135 ST/RIVERSIDE DR-B567 
+Transfers: None  
+Other: 1, 26.0
+, StopID: B567-W 135 ST/RIVERSIDE DR M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/TIEMANN PL-B741 	 Next: BROADWAY/W 135 ST-B557 
+Transfers: None  
+Other: 1, 30.0
+, StopID: B557-BROADWAY/W 135 ST M5-M5-bus LOCAL 
+Prev: W 135 ST/RIVERSIDE DR-B567 	 Next: BROADWAY/W 137 ST-B558 
+Transfers: ['B581']  
+Other: 1, 30.0
+, StopID: B558-BROADWAY/W 137 ST M5-M5-bus LOCAL 
+Prev: BROADWAY/W 135 ST-B557 	 Next: BROADWAY/W 139 ST-B559 
+Transfers: ['B582', 'S37']  
+Other: 1, 30.0
+, StopID: B559-BROADWAY/W 139 ST M5-M5-bus LOCAL 
+Prev: BROADWAY/W 137 ST-B558 	 Next: BROADWAY/W 141 ST-B560 
+Transfers: ['B583']  
+Other: 1, 30.0
+, StopID: B560-BROADWAY/W 141 ST M5-M5-bus LOCAL 
+Prev: BROADWAY/W 139 ST-B559 	 Next: BROADWAY/W 143 ST-B561 
+Transfers: ['B584']  
+Other: 1, 30.0
+, StopID: B561-BROADWAY/W 143 ST M5-M5-bus LOCAL 
+Prev: BROADWAY/W 141 ST-B560 	 Next: BROADWAY/W 145 ST-B562 
+Transfers: ['B585']  
+Other: 1, 30.0
+, StopID: B562-BROADWAY/W 145 ST M5-M5-bus LOCAL 
+Prev: BROADWAY/W 143 ST-B561 	 Next: BROADWAY/W 147 ST-B563 
+Transfers: ['B586', 'S38']  
+Other: 1, 30.0
+, StopID: B563-BROADWAY/W 147 ST M5-M5-bus LOCAL 
+Prev: BROADWAY/W 145 ST-B562 	 Next: BROADWAY/W 149 ST-B564 
+Transfers: ['B587']  
+Other: 1, 30.0
+, StopID: B564-BROADWAY/W 149 ST M5-M5-bus LOCAL 
+Prev: BROADWAY/W 147 ST-B563 	 Next: BROADWAY/W 151 ST-B565 
+Transfers: ['B588']  
+Other: 1, 30.0
+, StopID: B565-BROADWAY/W 151 ST M5-M5-bus LOCAL 
+Prev: BROADWAY/W 149 ST-B564 	 Next: BROADWAY/W 153 ST-B566 
+Transfers: ['B589']  
+Other: 1, 30.0
+, StopID: B566-BROADWAY/W 153 ST M5-M5-bus LOCAL 
+Prev: BROADWAY/W 151 ST-B565 	 Next: BROADWAY/W 155 ST-B595 
+Transfers: ['B590']  
+Other: 1, 30.0
+, StopID: B595-BROADWAY/W 155 ST M5-M5-bus LOCAL 
+Prev: BROADWAY/W 153 ST-B566 	 Next: BROADWAY/W 157 ST-B596 
+Transfers: ['B623']  
+Other: 1, 33.0
+]
+>>>>>> crime h = 0.15862246670836158<<<<<<<<
+>>>>>> transfers_route 0<<<<<<<<
+>>>>>> transfers_mode 0<<<<<<<<
+>>>>>> number of stops 41<<<<<<<<
+path1***********************
+[StopID: B109-AV OF THE AMERICAS/W 57 ST M5-M5-bus LOCAL 
+Prev: AV OF THE AMERICAS/W 54 ST-B108 	 Next: CENTRAL PK S/6 AV-B643 
+Transfers: ['B134', 'S218', 'S219']  
+Other: 1, 18.0
+, StopID: B643-CENTRAL PK S/6 AV M5-M5-bus LOCAL 
+Prev: AV OF THE AMERICAS/W 57 ST-B109 	 Next: CENTRAL PK S/7 AV-B644 
+Transfers: ['B649']  
+Other: 1, 22.0
+, StopID: B644-CENTRAL PK S/7 AV M5-M5-bus LOCAL 
+Prev: CENTRAL PK S/6 AV-B643 	 Next: CENTRAL PK S/COLUMBUS CI-B645 
+Transfers: ['B650']  
+Other: 1, 22.0
+, StopID: B645-CENTRAL PK S/COLUMBUS CI M5-M5-bus LOCAL 
+Prev: CENTRAL PK S/7 AV-B644 	 Next: BROADWAY/W 61 ST-B16 
+Transfers: ['B651', 'S23', 'S126', 'S127', 'S128', 'S129']  
+Other: 1, 22.0
+, StopID: B16-BROADWAY/W 61 ST M5-M5-bus LOCAL 
+Prev: CENTRAL PK S/COLUMBUS CI-B645 	 Next: BROADWAY/W 63 ST-B17 
+Transfers: ['B30', 'B50']  
+Other: 1, 20.0
+, StopID: B17-BROADWAY/W 63 ST M5-M5-bus LOCAL 
+Prev: BROADWAY/W 61 ST-B16 	 Next: BROADWAY/W 66 ST-B18 
+Transfers: ['B31', 'B51']  
+Other: 1, 20.0
+, StopID: B18-BROADWAY/W 66 ST M5-M5-bus LOCAL 
+Prev: BROADWAY/W 63 ST-B17 	 Next: BROADWAY/W 69 ST-B19 
+Transfers: ['B32', 'B52', 'S24']  
+Other: 1, 20.0
+, StopID: B19-BROADWAY/W 69 ST M5-M5-bus LOCAL 
+Prev: BROADWAY/W 66 ST-B18 	 Next: W 72 ST/BROADWAY-B15 
+Transfers: ['B33', 'B53']  
+Other: 1, 20.0
+, StopID: B15-W 72 ST/BROADWAY M5-M5-bus LOCAL 
+Prev: BROADWAY/W 69 ST-B19 	 Next: W 72 ST/WEST END AV-B20 
+Transfers: ['B0']  
+Other: 1, 20.0
+, StopID: B20-W 72 ST/WEST END AV M5-M5-bus LOCAL 
+Prev: W 72 ST/BROADWAY-B15 	 Next: RIVERSIDE DR/W 74 ST-B21 
+Transfers: None  
+Other: 1, 20.0
+, StopID: B21-RIVERSIDE DR/W 74 ST M5-M5-bus LOCAL 
+Prev: W 72 ST/WEST END AV-B20 	 Next: RIVERSIDE DR/W 77 ST-B22 
+Transfers: None  
+Other: 1, 20.0
+, StopID: B22-RIVERSIDE DR/W 77 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 74 ST-B21 	 Next: RIVERSIDE DR/W 79 ST-B23 
+Transfers: None  
+Other: 1, 20.0
+, StopID: B23-RIVERSIDE DR/W 79 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 77 ST-B22 	 Next: RIVERSIDE DR/W 82 ST-B24 
+Transfers: None  
+Other: 1, 20.0
+, StopID: B24-RIVERSIDE DR/W 82 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 79 ST-B23 	 Next: RIVERSIDE DR/W 85 ST-B25 
+Transfers: None  
+Other: 1, 20.0
+, StopID: B25-RIVERSIDE DR/W 85 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 82 ST-B24 	 Next: RIVERSIDE DR/W 87 ST-B677 
+Transfers: None  
+Other: 1, 20.0
+, StopID: B677-RIVERSIDE DR/W 87 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 85 ST-B25 	 Next: RIVERSIDE DR/W 89 ST-B678 
+Transfers: None  
+Other: 1, 24.0
+, StopID: B678-RIVERSIDE DR/W 89 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 87 ST-B677 	 Next: RIVERSIDE DR/W 91 ST-B679 
+Transfers: None  
+Other: 1, 24.0
+, StopID: B679-RIVERSIDE DR/W 91 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 89 ST-B678 	 Next: RIVERSIDE DR/W 94 ST-B680 
+Transfers: None  
+Other: 1, 24.0
+, StopID: B680-RIVERSIDE DR/W 94 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 91 ST-B679 	 Next: RIVERSIDE DR/W 97 ST-B681 
+Transfers: None  
+Other: 1, 24.0
+, StopID: B681-RIVERSIDE DR/W 97 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 94 ST-B680 	 Next: RIVERSIDE DR/W 100 ST-B682 
+Transfers: None  
+Other: 1, 24.0
+, StopID: B682-RIVERSIDE DR/W 100 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 97 ST-B681 	 Next: RIVERSIDE DR/W 103 ST-B683 
+Transfers: None  
+Other: 1, 24.0
+, StopID: B683-RIVERSIDE DR/W 103 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 100 ST-B682 	 Next: RIVERSIDE DR/W 106 ST-B684 
+Transfers: None  
+Other: 1, 24.0
+, StopID: B684-RIVERSIDE DR/W 106 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 103 ST-B683 	 Next: RIVERSIDE DR/W 108 ST-B685 
+Transfers: None  
+Other: 1, 24.0
+, StopID: B685-RIVERSIDE DR/W 108 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 106 ST-B684 	 Next: RIVERSIDE DR/W 112 ST-B736 
+Transfers: None  
+Other: 1, 24.0
+, StopID: B736-RIVERSIDE DR/W 112 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 108 ST-B685 	 Next: RIVERSIDE DR/W 114 ST-B737 
+Transfers: None  
+Other: 1, 26.0
+, StopID: B737-RIVERSIDE DR/W 114 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 112 ST-B736 	 Next: RIVERSIDE DR/W 116 ST-B738 
+Transfers: None  
+Other: 1, 26.0
+, StopID: B738-RIVERSIDE DR/W 116 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 114 ST-B737 	 Next: RIVERSIDE DR/W 119 ST-B739 
+Transfers: None  
+Other: 1, 26.0
+, StopID: B739-RIVERSIDE DR/W 119 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 116 ST-B738 	 Next: RIVERSIDE DR/W 122 ST-B740 
+Transfers: None  
+Other: 1, 26.0
+, StopID: B740-RIVERSIDE DR/W 122 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 119 ST-B739 	 Next: RIVERSIDE DR/TIEMANN PL-B741 
+Transfers: None  
+Other: 1, 26.0
+, StopID: B741-RIVERSIDE DR/TIEMANN PL M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 122 ST-B740 	 Next: W 135 ST/RIVERSIDE DR-B567 
+Transfers: None  
+Other: 1, 26.0
+, StopID: B567-W 135 ST/RIVERSIDE DR M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/TIEMANN PL-B741 	 Next: BROADWAY/W 135 ST-B557 
+Transfers: None  
+Other: 1, 30.0
+, StopID: B557-BROADWAY/W 135 ST M5-M5-bus LOCAL 
+Prev: W 135 ST/RIVERSIDE DR-B567 	 Next: BROADWAY/W 137 ST-B558 
+Transfers: ['B581']  
+Other: 1, 30.0
+, StopID: B558-BROADWAY/W 137 ST M5-M5-bus LOCAL 
+Prev: BROADWAY/W 135 ST-B557 	 Next: BROADWAY/W 139 ST-B559 
+Transfers: ['B582', 'S37']  
+Other: 1, 30.0
+, StopID: B559-BROADWAY/W 139 ST M5-M5-bus LOCAL 
+Prev: BROADWAY/W 137 ST-B558 	 Next: BROADWAY/W 141 ST-B560 
+Transfers: ['B583']  
+Other: 1, 30.0
+, StopID: B560-BROADWAY/W 141 ST M5-M5-bus LOCAL 
+Prev: BROADWAY/W 139 ST-B559 	 Next: BROADWAY/W 143 ST-B561 
+Transfers: ['B584']  
+Other: 1, 30.0
+, StopID: B561-BROADWAY/W 143 ST M5-M5-bus LOCAL 
+Prev: BROADWAY/W 141 ST-B560 	 Next: BROADWAY/W 145 ST-B562 
+Transfers: ['B585']  
+Other: 1, 30.0
+, StopID: B562-BROADWAY/W 145 ST M5-M5-bus LOCAL 
+Prev: BROADWAY/W 143 ST-B561 	 Next: BROADWAY/W 147 ST-B563 
+Transfers: ['B586', 'S38']  
+Other: 1, 30.0
+, StopID: B563-BROADWAY/W 147 ST M5-M5-bus LOCAL 
+Prev: BROADWAY/W 145 ST-B562 	 Next: BROADWAY/W 149 ST-B564 
+Transfers: ['B587']  
+Other: 1, 30.0
+, StopID: B564-BROADWAY/W 149 ST M5-M5-bus LOCAL 
+Prev: BROADWAY/W 147 ST-B563 	 Next: BROADWAY/W 151 ST-B565 
+Transfers: ['B588']  
+Other: 1, 30.0
+, StopID: B565-BROADWAY/W 151 ST M5-M5-bus LOCAL 
+Prev: BROADWAY/W 149 ST-B564 	 Next: BROADWAY/W 153 ST-B566 
+Transfers: ['B589']  
+Other: 1, 30.0
+, StopID: B566-BROADWAY/W 153 ST M5-M5-bus LOCAL 
+Prev: BROADWAY/W 151 ST-B565 	 Next: BROADWAY/W 155 ST-B595 
+Transfers: ['B590']  
+Other: 1, 30.0
+, StopID: B595-BROADWAY/W 155 ST M5-M5-bus LOCAL 
+Prev: BROADWAY/W 153 ST-B566 	 Next: BROADWAY/W 157 ST-B596 
+Transfers: ['B623']  
+Other: 1, 33.0
+]
+>>>>>> crime h = 0.1616825528934184<<<<<<<<
+>>>>>> transfers_route 0<<<<<<<<
+>>>>>> transfers_mode 0<<<<<<<<
+>>>>>> number of stops 42<<<<<<<<
+------------------------
+start:150 Central Park S, New York, NY 10019
+end: 613 W 155th St, New York, NY 10032
+accessibility: n
+------------------------
+path2***********************
+[StopID: B643-CENTRAL PK S/6 AV M5-M5-bus LOCAL 
+Prev: AV OF THE AMERICAS/W 57 ST-B109 	 Next: CENTRAL PK S/7 AV-B644 
+Transfers: ['B649']  
+Other: 1, 22.0
+, StopID: B644-CENTRAL PK S/7 AV M5-M5-bus LOCAL 
+Prev: CENTRAL PK S/6 AV-B643 	 Next: CENTRAL PK S/COLUMBUS CI-B645 
+Transfers: ['B650']  
+Other: 1, 22.0
+, StopID: B645-CENTRAL PK S/COLUMBUS CI M5-M5-bus LOCAL 
+Prev: CENTRAL PK S/7 AV-B644 	 Next: BROADWAY/W 61 ST-B16 
+Transfers: ['B651', 'S23', 'S126', 'S127', 'S128', 'S129']  
+Other: 1, 22.0
+, StopID: B16-BROADWAY/W 61 ST M5-M5-bus LOCAL 
+Prev: CENTRAL PK S/COLUMBUS CI-B645 	 Next: BROADWAY/W 63 ST-B17 
+Transfers: ['B30', 'B50']  
+Other: 1, 20.0
+, StopID: B17-BROADWAY/W 63 ST M5-M5-bus LOCAL 
+Prev: BROADWAY/W 61 ST-B16 	 Next: BROADWAY/W 66 ST-B18 
+Transfers: ['B31', 'B51']  
+Other: 1, 20.0
+, StopID: B18-BROADWAY/W 66 ST M5-M5-bus LOCAL 
+Prev: BROADWAY/W 63 ST-B17 	 Next: BROADWAY/W 69 ST-B19 
+Transfers: ['B32', 'B52', 'S24']  
+Other: 1, 20.0
+, StopID: B19-BROADWAY/W 69 ST M5-M5-bus LOCAL 
+Prev: BROADWAY/W 66 ST-B18 	 Next: W 72 ST/BROADWAY-B15 
+Transfers: ['B33', 'B53']  
+Other: 1, 20.0
+, StopID: B15-W 72 ST/BROADWAY M5-M5-bus LOCAL 
+Prev: BROADWAY/W 69 ST-B19 	 Next: W 72 ST/WEST END AV-B20 
+Transfers: ['B0']  
+Other: 1, 20.0
+, StopID: B20-W 72 ST/WEST END AV M5-M5-bus LOCAL 
+Prev: W 72 ST/BROADWAY-B15 	 Next: RIVERSIDE DR/W 74 ST-B21 
+Transfers: None  
+Other: 1, 20.0
+, StopID: B21-RIVERSIDE DR/W 74 ST M5-M5-bus LOCAL 
+Prev: W 72 ST/WEST END AV-B20 	 Next: RIVERSIDE DR/W 77 ST-B22 
+Transfers: None  
+Other: 1, 20.0
+, StopID: B22-RIVERSIDE DR/W 77 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 74 ST-B21 	 Next: RIVERSIDE DR/W 79 ST-B23 
+Transfers: None  
+Other: 1, 20.0
+, StopID: B23-RIVERSIDE DR/W 79 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 77 ST-B22 	 Next: RIVERSIDE DR/W 82 ST-B24 
+Transfers: None  
+Other: 1, 20.0
+, StopID: B24-RIVERSIDE DR/W 82 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 79 ST-B23 	 Next: RIVERSIDE DR/W 85 ST-B25 
+Transfers: None  
+Other: 1, 20.0
+, StopID: B25-RIVERSIDE DR/W 85 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 82 ST-B24 	 Next: RIVERSIDE DR/W 87 ST-B677 
+Transfers: None  
+Other: 1, 20.0
+, StopID: B677-RIVERSIDE DR/W 87 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 85 ST-B25 	 Next: RIVERSIDE DR/W 89 ST-B678 
+Transfers: None  
+Other: 1, 24.0
+, StopID: B678-RIVERSIDE DR/W 89 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 87 ST-B677 	 Next: RIVERSIDE DR/W 91 ST-B679 
+Transfers: None  
+Other: 1, 24.0
+, StopID: B679-RIVERSIDE DR/W 91 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 89 ST-B678 	 Next: RIVERSIDE DR/W 94 ST-B680 
+Transfers: None  
+Other: 1, 24.0
+, StopID: B680-RIVERSIDE DR/W 94 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 91 ST-B679 	 Next: RIVERSIDE DR/W 97 ST-B681 
+Transfers: None  
+Other: 1, 24.0
+, StopID: B681-RIVERSIDE DR/W 97 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 94 ST-B680 	 Next: RIVERSIDE DR/W 100 ST-B682 
+Transfers: None  
+Other: 1, 24.0
+, StopID: B682-RIVERSIDE DR/W 100 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 97 ST-B681 	 Next: RIVERSIDE DR/W 103 ST-B683 
+Transfers: None  
+Other: 1, 24.0
+, StopID: B683-RIVERSIDE DR/W 103 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 100 ST-B682 	 Next: RIVERSIDE DR/W 106 ST-B684 
+Transfers: None  
+Other: 1, 24.0
+, StopID: B684-RIVERSIDE DR/W 106 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 103 ST-B683 	 Next: RIVERSIDE DR/W 108 ST-B685 
+Transfers: None  
+Other: 1, 24.0
+, StopID: B685-RIVERSIDE DR/W 108 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 106 ST-B684 	 Next: RIVERSIDE DR/W 112 ST-B736 
+Transfers: None  
+Other: 1, 24.0
+, StopID: B736-RIVERSIDE DR/W 112 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 108 ST-B685 	 Next: RIVERSIDE DR/W 114 ST-B737 
+Transfers: None  
+Other: 1, 26.0
+, StopID: B737-RIVERSIDE DR/W 114 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 112 ST-B736 	 Next: RIVERSIDE DR/W 116 ST-B738 
+Transfers: None  
+Other: 1, 26.0
+, StopID: B738-RIVERSIDE DR/W 116 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 114 ST-B737 	 Next: RIVERSIDE DR/W 119 ST-B739 
+Transfers: None  
+Other: 1, 26.0
+, StopID: B739-RIVERSIDE DR/W 119 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 116 ST-B738 	 Next: RIVERSIDE DR/W 122 ST-B740 
+Transfers: None  
+Other: 1, 26.0
+, StopID: B740-RIVERSIDE DR/W 122 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 119 ST-B739 	 Next: RIVERSIDE DR/TIEMANN PL-B741 
+Transfers: None  
+Other: 1, 26.0
+, StopID: B741-RIVERSIDE DR/TIEMANN PL M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 122 ST-B740 	 Next: W 135 ST/RIVERSIDE DR-B567 
+Transfers: None  
+Other: 1, 26.0
+, StopID: B567-W 135 ST/RIVERSIDE DR M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/TIEMANN PL-B741 	 Next: BROADWAY/W 135 ST-B557 
+Transfers: None  
+Other: 1, 30.0
+, StopID: B557-BROADWAY/W 135 ST M5-M5-bus LOCAL 
+Prev: W 135 ST/RIVERSIDE DR-B567 	 Next: BROADWAY/W 137 ST-B558 
+Transfers: ['B581']  
+Other: 1, 30.0
+, StopID: B558-BROADWAY/W 137 ST M5-M5-bus LOCAL 
+Prev: BROADWAY/W 135 ST-B557 	 Next: BROADWAY/W 139 ST-B559 
+Transfers: ['B582', 'S37']  
+Other: 1, 30.0
+, StopID: B559-BROADWAY/W 139 ST M5-M5-bus LOCAL 
+Prev: BROADWAY/W 137 ST-B558 	 Next: BROADWAY/W 141 ST-B560 
+Transfers: ['B583']  
+Other: 1, 30.0
+, StopID: B560-BROADWAY/W 141 ST M5-M5-bus LOCAL 
+Prev: BROADWAY/W 139 ST-B559 	 Next: BROADWAY/W 143 ST-B561 
+Transfers: ['B584']  
+Other: 1, 30.0
+, StopID: B561-BROADWAY/W 143 ST M5-M5-bus LOCAL 
+Prev: BROADWAY/W 141 ST-B560 	 Next: BROADWAY/W 145 ST-B562 
+Transfers: ['B585']  
+Other: 1, 30.0
+, StopID: B562-BROADWAY/W 145 ST M5-M5-bus LOCAL 
+Prev: BROADWAY/W 143 ST-B561 	 Next: BROADWAY/W 147 ST-B563 
+Transfers: ['B586', 'S38']  
+Other: 1, 30.0
+, StopID: B563-BROADWAY/W 147 ST M5-M5-bus LOCAL 
+Prev: BROADWAY/W 145 ST-B562 	 Next: BROADWAY/W 149 ST-B564 
+Transfers: ['B587']  
+Other: 1, 30.0
+, StopID: B564-BROADWAY/W 149 ST M5-M5-bus LOCAL 
+Prev: BROADWAY/W 147 ST-B563 	 Next: BROADWAY/W 151 ST-B565 
+Transfers: ['B588']  
+Other: 1, 30.0
+, StopID: B565-BROADWAY/W 151 ST M5-M5-bus LOCAL 
+Prev: BROADWAY/W 149 ST-B564 	 Next: BROADWAY/W 153 ST-B566 
+Transfers: ['B589']  
+Other: 1, 30.0
+, StopID: B566-BROADWAY/W 153 ST M5-M5-bus LOCAL 
+Prev: BROADWAY/W 151 ST-B565 	 Next: BROADWAY/W 155 ST-B595 
+Transfers: ['B590']  
+Other: 1, 30.0
+, StopID: B595-BROADWAY/W 155 ST M5-M5-bus LOCAL 
+Prev: BROADWAY/W 153 ST-B566 	 Next: BROADWAY/W 157 ST-B596 
+Transfers: ['B623']  
+Other: 1, 33.0
+]
+>>>>>> crime h = 0.15862246670836158<<<<<<<<
+>>>>>> transfers_route 0<<<<<<<<
+>>>>>> transfers_mode 0<<<<<<<<
+>>>>>> number of stops 41<<<<<<<<
+path3***********************
+[StopID: B643-CENTRAL PK S/6 AV M5-M5-bus LOCAL 
+Prev: AV OF THE AMERICAS/W 57 ST-B109 	 Next: CENTRAL PK S/7 AV-B644 
+Transfers: ['B649']  
+Other: 1, 22.0
+, StopID: B644-CENTRAL PK S/7 AV M5-M5-bus LOCAL 
+Prev: CENTRAL PK S/6 AV-B643 	 Next: CENTRAL PK S/COLUMBUS CI-B645 
+Transfers: ['B650']  
+Other: 1, 22.0
+, StopID: B645-CENTRAL PK S/COLUMBUS CI M5-M5-bus LOCAL 
+Prev: CENTRAL PK S/7 AV-B644 	 Next: BROADWAY/W 61 ST-B16 
+Transfers: ['B651', 'S23', 'S126', 'S127', 'S128', 'S129']  
+Other: 1, 22.0
+, StopID: B16-BROADWAY/W 61 ST M5-M5-bus LOCAL 
+Prev: CENTRAL PK S/COLUMBUS CI-B645 	 Next: BROADWAY/W 63 ST-B17 
+Transfers: ['B30', 'B50']  
+Other: 1, 20.0
+, StopID: B17-BROADWAY/W 63 ST M5-M5-bus LOCAL 
+Prev: BROADWAY/W 61 ST-B16 	 Next: BROADWAY/W 66 ST-B18 
+Transfers: ['B31', 'B51']  
+Other: 1, 20.0
+, StopID: B18-BROADWAY/W 66 ST M5-M5-bus LOCAL 
+Prev: BROADWAY/W 63 ST-B17 	 Next: BROADWAY/W 69 ST-B19 
+Transfers: ['B32', 'B52', 'S24']  
+Other: 1, 20.0
+, StopID: B19-BROADWAY/W 69 ST M5-M5-bus LOCAL 
+Prev: BROADWAY/W 66 ST-B18 	 Next: W 72 ST/BROADWAY-B15 
+Transfers: ['B33', 'B53']  
+Other: 1, 20.0
+, StopID: B15-W 72 ST/BROADWAY M5-M5-bus LOCAL 
+Prev: BROADWAY/W 69 ST-B19 	 Next: W 72 ST/WEST END AV-B20 
+Transfers: ['B0']  
+Other: 1, 20.0
+, StopID: B20-W 72 ST/WEST END AV M5-M5-bus LOCAL 
+Prev: W 72 ST/BROADWAY-B15 	 Next: RIVERSIDE DR/W 74 ST-B21 
+Transfers: None  
+Other: 1, 20.0
+, StopID: B21-RIVERSIDE DR/W 74 ST M5-M5-bus LOCAL 
+Prev: W 72 ST/WEST END AV-B20 	 Next: RIVERSIDE DR/W 77 ST-B22 
+Transfers: None  
+Other: 1, 20.0
+, StopID: B22-RIVERSIDE DR/W 77 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 74 ST-B21 	 Next: RIVERSIDE DR/W 79 ST-B23 
+Transfers: None  
+Other: 1, 20.0
+, StopID: B23-RIVERSIDE DR/W 79 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 77 ST-B22 	 Next: RIVERSIDE DR/W 82 ST-B24 
+Transfers: None  
+Other: 1, 20.0
+, StopID: B24-RIVERSIDE DR/W 82 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 79 ST-B23 	 Next: RIVERSIDE DR/W 85 ST-B25 
+Transfers: None  
+Other: 1, 20.0
+, StopID: B25-RIVERSIDE DR/W 85 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 82 ST-B24 	 Next: RIVERSIDE DR/W 87 ST-B677 
+Transfers: None  
+Other: 1, 20.0
+, StopID: B677-RIVERSIDE DR/W 87 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 85 ST-B25 	 Next: RIVERSIDE DR/W 89 ST-B678 
+Transfers: None  
+Other: 1, 24.0
+, StopID: B678-RIVERSIDE DR/W 89 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 87 ST-B677 	 Next: RIVERSIDE DR/W 91 ST-B679 
+Transfers: None  
+Other: 1, 24.0
+, StopID: B679-RIVERSIDE DR/W 91 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 89 ST-B678 	 Next: RIVERSIDE DR/W 94 ST-B680 
+Transfers: None  
+Other: 1, 24.0
+, StopID: B680-RIVERSIDE DR/W 94 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 91 ST-B679 	 Next: RIVERSIDE DR/W 97 ST-B681 
+Transfers: None  
+Other: 1, 24.0
+, StopID: B681-RIVERSIDE DR/W 97 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 94 ST-B680 	 Next: RIVERSIDE DR/W 100 ST-B682 
+Transfers: None  
+Other: 1, 24.0
+, StopID: B682-RIVERSIDE DR/W 100 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 97 ST-B681 	 Next: RIVERSIDE DR/W 103 ST-B683 
+Transfers: None  
+Other: 1, 24.0
+, StopID: B683-RIVERSIDE DR/W 103 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 100 ST-B682 	 Next: RIVERSIDE DR/W 106 ST-B684 
+Transfers: None  
+Other: 1, 24.0
+, StopID: B684-RIVERSIDE DR/W 106 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 103 ST-B683 	 Next: RIVERSIDE DR/W 108 ST-B685 
+Transfers: None  
+Other: 1, 24.0
+, StopID: B685-RIVERSIDE DR/W 108 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 106 ST-B684 	 Next: RIVERSIDE DR/W 112 ST-B736 
+Transfers: None  
+Other: 1, 24.0
+, StopID: B736-RIVERSIDE DR/W 112 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 108 ST-B685 	 Next: RIVERSIDE DR/W 114 ST-B737 
+Transfers: None  
+Other: 1, 26.0
+, StopID: B737-RIVERSIDE DR/W 114 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 112 ST-B736 	 Next: RIVERSIDE DR/W 116 ST-B738 
+Transfers: None  
+Other: 1, 26.0
+, StopID: B738-RIVERSIDE DR/W 116 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 114 ST-B737 	 Next: RIVERSIDE DR/W 119 ST-B739 
+Transfers: None  
+Other: 1, 26.0
+, StopID: B739-RIVERSIDE DR/W 119 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 116 ST-B738 	 Next: RIVERSIDE DR/W 122 ST-B740 
+Transfers: None  
+Other: 1, 26.0
+, StopID: B740-RIVERSIDE DR/W 122 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 119 ST-B739 	 Next: RIVERSIDE DR/TIEMANN PL-B741 
+Transfers: None  
+Other: 1, 26.0
+, StopID: B741-RIVERSIDE DR/TIEMANN PL M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 122 ST-B740 	 Next: W 135 ST/RIVERSIDE DR-B567 
+Transfers: None  
+Other: 1, 26.0
+, StopID: B567-W 135 ST/RIVERSIDE DR M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/TIEMANN PL-B741 	 Next: BROADWAY/W 135 ST-B557 
+Transfers: None  
+Other: 1, 30.0
+, StopID: B557-BROADWAY/W 135 ST M5-M5-bus LOCAL 
+Prev: W 135 ST/RIVERSIDE DR-B567 	 Next: BROADWAY/W 137 ST-B558 
+Transfers: ['B581']  
+Other: 1, 30.0
+, StopID: B558-BROADWAY/W 137 ST M5-M5-bus LOCAL 
+Prev: BROADWAY/W 135 ST-B557 	 Next: BROADWAY/W 139 ST-B559 
+Transfers: ['B582', 'S37']  
+Other: 1, 30.0
+, StopID: B559-BROADWAY/W 139 ST M5-M5-bus LOCAL 
+Prev: BROADWAY/W 137 ST-B558 	 Next: BROADWAY/W 141 ST-B560 
+Transfers: ['B583']  
+Other: 1, 30.0
+, StopID: B560-BROADWAY/W 141 ST M5-M5-bus LOCAL 
+Prev: BROADWAY/W 139 ST-B559 	 Next: BROADWAY/W 143 ST-B561 
+Transfers: ['B584']  
+Other: 1, 30.0
+, StopID: B561-BROADWAY/W 143 ST M5-M5-bus LOCAL 
+Prev: BROADWAY/W 141 ST-B560 	 Next: BROADWAY/W 145 ST-B562 
+Transfers: ['B585']  
+Other: 1, 30.0
+, StopID: B562-BROADWAY/W 145 ST M5-M5-bus LOCAL 
+Prev: BROADWAY/W 143 ST-B561 	 Next: BROADWAY/W 147 ST-B563 
+Transfers: ['B586', 'S38']  
+Other: 1, 30.0
+, StopID: B563-BROADWAY/W 147 ST M5-M5-bus LOCAL 
+Prev: BROADWAY/W 145 ST-B562 	 Next: BROADWAY/W 149 ST-B564 
+Transfers: ['B587']  
+Other: 1, 30.0
+, StopID: B564-BROADWAY/W 149 ST M5-M5-bus LOCAL 
+Prev: BROADWAY/W 147 ST-B563 	 Next: BROADWAY/W 151 ST-B565 
+Transfers: ['B588']  
+Other: 1, 30.0
+, StopID: B565-BROADWAY/W 151 ST M5-M5-bus LOCAL 
+Prev: BROADWAY/W 149 ST-B564 	 Next: BROADWAY/W 153 ST-B566 
+Transfers: ['B589']  
+Other: 1, 30.0
+, StopID: B566-BROADWAY/W 153 ST M5-M5-bus LOCAL 
+Prev: BROADWAY/W 151 ST-B565 	 Next: BROADWAY/W 155 ST-B595 
+Transfers: ['B590']  
+Other: 1, 30.0
+, StopID: B595-BROADWAY/W 155 ST M5-M5-bus LOCAL 
+Prev: BROADWAY/W 153 ST-B566 	 Next: BROADWAY/W 157 ST-B596 
+Transfers: ['B623']  
+Other: 1, 33.0
+, StopID: B596-BROADWAY/W 157 ST M5-M5-bus LOCAL 
+Prev: BROADWAY/W 155 ST-B595 	 Next: BROADWAY/W 159 ST-B597 
+Transfers: ['B624', 'S39']  
+Other: 1, 33.0
+]
+>>>>>> crime h = 0.16297757343370395<<<<<<<<
+>>>>>> transfers_route 0<<<<<<<<
+>>>>>> transfers_mode 0<<<<<<<<
+>>>>>> number of stops 42<<<<<<<<
+path4***********************
+[StopID: B109-AV OF THE AMERICAS/W 57 ST M5-M5-bus LOCAL 
+Prev: AV OF THE AMERICAS/W 54 ST-B108 	 Next: CENTRAL PK S/6 AV-B643 
+Transfers: ['B134', 'S218', 'S219']  
+Other: 1, 18.0
+, StopID: B643-CENTRAL PK S/6 AV M5-M5-bus LOCAL 
+Prev: AV OF THE AMERICAS/W 57 ST-B109 	 Next: CENTRAL PK S/7 AV-B644 
+Transfers: ['B649']  
+Other: 1, 22.0
+, StopID: B644-CENTRAL PK S/7 AV M5-M5-bus LOCAL 
+Prev: CENTRAL PK S/6 AV-B643 	 Next: CENTRAL PK S/COLUMBUS CI-B645 
+Transfers: ['B650']  
+Other: 1, 22.0
+, StopID: B645-CENTRAL PK S/COLUMBUS CI M5-M5-bus LOCAL 
+Prev: CENTRAL PK S/7 AV-B644 	 Next: BROADWAY/W 61 ST-B16 
+Transfers: ['B651', 'S23', 'S126', 'S127', 'S128', 'S129']  
+Other: 1, 22.0
+, StopID: B16-BROADWAY/W 61 ST M5-M5-bus LOCAL 
+Prev: CENTRAL PK S/COLUMBUS CI-B645 	 Next: BROADWAY/W 63 ST-B17 
+Transfers: ['B30', 'B50']  
+Other: 1, 20.0
+, StopID: B17-BROADWAY/W 63 ST M5-M5-bus LOCAL 
+Prev: BROADWAY/W 61 ST-B16 	 Next: BROADWAY/W 66 ST-B18 
+Transfers: ['B31', 'B51']  
+Other: 1, 20.0
+, StopID: B18-BROADWAY/W 66 ST M5-M5-bus LOCAL 
+Prev: BROADWAY/W 63 ST-B17 	 Next: BROADWAY/W 69 ST-B19 
+Transfers: ['B32', 'B52', 'S24']  
+Other: 1, 20.0
+, StopID: B19-BROADWAY/W 69 ST M5-M5-bus LOCAL 
+Prev: BROADWAY/W 66 ST-B18 	 Next: W 72 ST/BROADWAY-B15 
+Transfers: ['B33', 'B53']  
+Other: 1, 20.0
+, StopID: B15-W 72 ST/BROADWAY M5-M5-bus LOCAL 
+Prev: BROADWAY/W 69 ST-B19 	 Next: W 72 ST/WEST END AV-B20 
+Transfers: ['B0']  
+Other: 1, 20.0
+, StopID: B20-W 72 ST/WEST END AV M5-M5-bus LOCAL 
+Prev: W 72 ST/BROADWAY-B15 	 Next: RIVERSIDE DR/W 74 ST-B21 
+Transfers: None  
+Other: 1, 20.0
+, StopID: B21-RIVERSIDE DR/W 74 ST M5-M5-bus LOCAL 
+Prev: W 72 ST/WEST END AV-B20 	 Next: RIVERSIDE DR/W 77 ST-B22 
+Transfers: None  
+Other: 1, 20.0
+, StopID: B22-RIVERSIDE DR/W 77 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 74 ST-B21 	 Next: RIVERSIDE DR/W 79 ST-B23 
+Transfers: None  
+Other: 1, 20.0
+, StopID: B23-RIVERSIDE DR/W 79 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 77 ST-B22 	 Next: RIVERSIDE DR/W 82 ST-B24 
+Transfers: None  
+Other: 1, 20.0
+, StopID: B24-RIVERSIDE DR/W 82 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 79 ST-B23 	 Next: RIVERSIDE DR/W 85 ST-B25 
+Transfers: None  
+Other: 1, 20.0
+, StopID: B25-RIVERSIDE DR/W 85 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 82 ST-B24 	 Next: RIVERSIDE DR/W 87 ST-B677 
+Transfers: None  
+Other: 1, 20.0
+, StopID: B677-RIVERSIDE DR/W 87 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 85 ST-B25 	 Next: RIVERSIDE DR/W 89 ST-B678 
+Transfers: None  
+Other: 1, 24.0
+, StopID: B678-RIVERSIDE DR/W 89 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 87 ST-B677 	 Next: RIVERSIDE DR/W 91 ST-B679 
+Transfers: None  
+Other: 1, 24.0
+, StopID: B679-RIVERSIDE DR/W 91 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 89 ST-B678 	 Next: RIVERSIDE DR/W 94 ST-B680 
+Transfers: None  
+Other: 1, 24.0
+, StopID: B680-RIVERSIDE DR/W 94 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 91 ST-B679 	 Next: RIVERSIDE DR/W 97 ST-B681 
+Transfers: None  
+Other: 1, 24.0
+, StopID: B681-RIVERSIDE DR/W 97 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 94 ST-B680 	 Next: RIVERSIDE DR/W 100 ST-B682 
+Transfers: None  
+Other: 1, 24.0
+, StopID: B682-RIVERSIDE DR/W 100 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 97 ST-B681 	 Next: RIVERSIDE DR/W 103 ST-B683 
+Transfers: None  
+Other: 1, 24.0
+, StopID: B683-RIVERSIDE DR/W 103 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 100 ST-B682 	 Next: RIVERSIDE DR/W 106 ST-B684 
+Transfers: None  
+Other: 1, 24.0
+, StopID: B684-RIVERSIDE DR/W 106 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 103 ST-B683 	 Next: RIVERSIDE DR/W 108 ST-B685 
+Transfers: None  
+Other: 1, 24.0
+, StopID: B685-RIVERSIDE DR/W 108 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 106 ST-B684 	 Next: RIVERSIDE DR/W 112 ST-B736 
+Transfers: None  
+Other: 1, 24.0
+, StopID: B736-RIVERSIDE DR/W 112 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 108 ST-B685 	 Next: RIVERSIDE DR/W 114 ST-B737 
+Transfers: None  
+Other: 1, 26.0
+, StopID: B737-RIVERSIDE DR/W 114 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 112 ST-B736 	 Next: RIVERSIDE DR/W 116 ST-B738 
+Transfers: None  
+Other: 1, 26.0
+, StopID: B738-RIVERSIDE DR/W 116 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 114 ST-B737 	 Next: RIVERSIDE DR/W 119 ST-B739 
+Transfers: None  
+Other: 1, 26.0
+, StopID: B739-RIVERSIDE DR/W 119 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 116 ST-B738 	 Next: RIVERSIDE DR/W 122 ST-B740 
+Transfers: None  
+Other: 1, 26.0
+, StopID: B740-RIVERSIDE DR/W 122 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 119 ST-B739 	 Next: RIVERSIDE DR/TIEMANN PL-B741 
+Transfers: None  
+Other: 1, 26.0
+, StopID: B741-RIVERSIDE DR/TIEMANN PL M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 122 ST-B740 	 Next: W 135 ST/RIVERSIDE DR-B567 
+Transfers: None  
+Other: 1, 26.0
+, StopID: B567-W 135 ST/RIVERSIDE DR M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/TIEMANN PL-B741 	 Next: BROADWAY/W 135 ST-B557 
+Transfers: None  
+Other: 1, 30.0
+, StopID: B557-BROADWAY/W 135 ST M5-M5-bus LOCAL 
+Prev: W 135 ST/RIVERSIDE DR-B567 	 Next: BROADWAY/W 137 ST-B558 
+Transfers: ['B581']  
+Other: 1, 30.0
+, StopID: B558-BROADWAY/W 137 ST M5-M5-bus LOCAL 
+Prev: BROADWAY/W 135 ST-B557 	 Next: BROADWAY/W 139 ST-B559 
+Transfers: ['B582', 'S37']  
+Other: 1, 30.0
+, StopID: B559-BROADWAY/W 139 ST M5-M5-bus LOCAL 
+Prev: BROADWAY/W 137 ST-B558 	 Next: BROADWAY/W 141 ST-B560 
+Transfers: ['B583']  
+Other: 1, 30.0
+, StopID: B560-BROADWAY/W 141 ST M5-M5-bus LOCAL 
+Prev: BROADWAY/W 139 ST-B559 	 Next: BROADWAY/W 143 ST-B561 
+Transfers: ['B584']  
+Other: 1, 30.0
+, StopID: B561-BROADWAY/W 143 ST M5-M5-bus LOCAL 
+Prev: BROADWAY/W 141 ST-B560 	 Next: BROADWAY/W 145 ST-B562 
+Transfers: ['B585']  
+Other: 1, 30.0
+, StopID: B562-BROADWAY/W 145 ST M5-M5-bus LOCAL 
+Prev: BROADWAY/W 143 ST-B561 	 Next: BROADWAY/W 147 ST-B563 
+Transfers: ['B586', 'S38']  
+Other: 1, 30.0
+, StopID: B563-BROADWAY/W 147 ST M5-M5-bus LOCAL 
+Prev: BROADWAY/W 145 ST-B562 	 Next: BROADWAY/W 149 ST-B564 
+Transfers: ['B587']  
+Other: 1, 30.0
+, StopID: B564-BROADWAY/W 149 ST M5-M5-bus LOCAL 
+Prev: BROADWAY/W 147 ST-B563 	 Next: BROADWAY/W 151 ST-B565 
+Transfers: ['B588']  
+Other: 1, 30.0
+, StopID: B565-BROADWAY/W 151 ST M5-M5-bus LOCAL 
+Prev: BROADWAY/W 149 ST-B564 	 Next: BROADWAY/W 153 ST-B566 
+Transfers: ['B589']  
+Other: 1, 30.0
+, StopID: B566-BROADWAY/W 153 ST M5-M5-bus LOCAL 
+Prev: BROADWAY/W 151 ST-B565 	 Next: BROADWAY/W 155 ST-B595 
+Transfers: ['B590']  
+Other: 1, 30.0
+, StopID: B595-BROADWAY/W 155 ST M5-M5-bus LOCAL 
+Prev: BROADWAY/W 153 ST-B566 	 Next: BROADWAY/W 157 ST-B596 
+Transfers: ['B623']  
+Other: 1, 33.0
+]
+>>>>>> crime h = 0.1616825528934184<<<<<<<<
+>>>>>> transfers_route 0<<<<<<<<
+>>>>>> transfers_mode 0<<<<<<<<
+>>>>>> number of stops 42<<<<<<<<
++++++++++++++++++++++++++++++++++++++
+------------------------
+start:365 5th Ave, New York, NY 10016
+end: 1234 E 6th St, New York, NY 10009
+accessibility: y
+------------------------
+***********************
+no paths found for: 
+365 5th Ave, New York, NY 10016 to 1234 E 6th St, New York, NY 10009y
+------------------------
+start:365 5th Ave, New York, NY 10016
+end: 1234 E 6th St, New York, NY 10009
+accessibility: n
+------------------------
+path0***********************
+[StopID: S157-34 St-Herald Sq F-BDFM-subway LOCAL 
+Prev: 23 St-S215 	 Next: 42 St-Bryant Pk-S162 
+Transfers: ['S155', 'S156', 'S158', 'S159', 'S243', 'S244', 'S245', 'S246', 'B502', 'B513', 'B530', 'B536', 'B540']  
+Other: 1, 14.0
+, StopID: S215-23 St F-BDFM-subway LOCAL 
+Prev: 14 St-S212 	 Next: 34 St-Herald Sq-S157 
+Transfers: ['S216', 'S217', 'B1052', 'B1101']  
+Other: 0, 13.0
+, StopID: S212-14 St F-BDFM-subway LOCAL 
+Prev: W 4 St-Wash Sq-S152 	 Next: 23 St-S215 
+Transfers: ['S10', 'S11', 'S12', 'S213', 'S214', 'S235', 'B1049', 'B1098']  
+Other: 0, 13.0
+, StopID: S152-W 4 St-Wash Sq F-BDFM-subway LOCAL 
+Prev: Broadway-Lafayette St-S147 	 Next: 14 St-S212 
+Transfers: ['S114', 'S115', 'S116', 'S150', 'S151', 'S153', 'S154', 'B485']  
+Other: 1, 6.0
+, StopID: S147-Broadway-Lafayette St F-BDFM-subway LOCAL 
+Prev: 2 Av-S210 	 Next: W 4 St-Wash Sq-S152 
+Transfers: ['S89', 'S145', 'S146', 'S148', 'S149', 'B1017']  
+Other: 1, 9.0
+, StopID: S210-2 Av F-BDFM-subway LOCAL 
+Prev: Delancey St-Essex St-S208 	 Next: Broadway-Lafayette St-S147 
+Transfers: ['S211', 'B919']  
+Other: 0, 9.0
+, StopID: S208-Delancey St-Essex St F-BDFM-subway LOCAL 
+Prev: East Broadway-S206 	 Next: 2 Av-S210 
+Transfers: ['S209', 'S230', 'S231', 'B944', 'B956']  
+Other: 0, 7.0
+, StopID: S206-East Broadway F-BDFM-subway LOCAL 
+Prev: NA-NA 	 Next: Delancey St-Essex St-S208 
+Transfers: ['S207']  
+Other: 0, 7.0
+, StopID: S207-East Broadway FX-None-subway LOCAL 
+Prev: NA-NA 	 Next: Delancey St-Essex St-S209 
+Transfers: ['S206']  
+Other: 0, 7.0
+, StopID: S211-2 Av FX-None-subway LOCAL 
+Prev: Delancey St-Essex St-S209 	 Next: Broadway-Lafayette St-S148 
+Transfers: ['S210', 'B919']  
+Other: 0, 9.0
+, StopID: B919-E HOUSTON ST/FORSYTH ST M21-M21-bus LOCAL 
+Prev: E HOUSTON ST/BOWERY-B918 	 Next: E HOUSTON ST/ESSEX ST-B957 
+Transfers: ['S210', 'S211']  
+Other: 1, 5.0
+, StopID: B957-E HOUSTON ST/ESSEX ST M21-M21-bus LOCAL 
+Prev: E HOUSTON ST/FORSYTH ST-B919 	 Next: E HOUSTON ST/NORFOLK ST-B958 
+Transfers: None  
+Other: 1, 7.0
+, StopID: B958-E HOUSTON ST/NORFOLK ST M21-M21-bus LOCAL 
+Prev: E HOUSTON ST/ESSEX ST-B957 	 Next: E HOUSTON ST/CLINTON ST-B959 
+Transfers: ['B950']  
+Other: 1, 7.0
+, StopID: B959-E HOUSTON ST/CLINTON ST M21-M21-bus LOCAL 
+Prev: E HOUSTON ST/NORFOLK ST-B958 	 Next: E HOUSTON ST/RIDGE ST-B960 
+Transfers: ['B951']  
+Other: 1, 7.0
+, StopID: B960-E HOUSTON ST/RIDGE ST M21-M21-bus LOCAL 
+Prev: E HOUSTON ST/CLINTON ST-B959 	 Next: E HOUSTON ST/COLUMBIA ST-B961 
+Transfers: ['B952']  
+Other: 1, 7.0
+, StopID: B961-E HOUSTON ST/COLUMBIA ST M21-M21-bus LOCAL 
+Prev: E HOUSTON ST/RIDGE ST-B960 	 Next: E HOUSTON ST/BARUCH DR-B962 
+Transfers: ['B966']  
+Other: 1, 7.0
+, StopID: B962-E HOUSTON ST/BARUCH DR M21-M21-bus LOCAL 
+Prev: E HOUSTON ST/COLUMBIA ST-B961 	 Next: E HOUSTON ST/MANGIN ST-B963 
+Transfers: None  
+Other: 1, 7.0
+, StopID: B963-E HOUSTON ST/MANGIN ST M21-M21-bus LOCAL 
+Prev: E HOUSTON ST/BARUCH DR-B962 	 Next: F. D. R. DRIVE/555 FDR DR-B964 
+Transfers: ['B967']  
+Other: 1, 7.0
+, StopID: B964-F. D. R. DRIVE/555 FDR DR M21-M21-bus LOCAL 
+Prev: E HOUSTON ST/MANGIN ST-B963 	 Next: GRAND ST/FDR DR-B965 
+Transfers: ['B968']  
+Other: 1, 7.0
+]
+>>>>>> crime h = 0.021855514172502047<<<<<<<<
+>>>>>> transfers_route 2<<<<<<<<
+>>>>>> transfers_mode 1<<<<<<<<
+>>>>>> number of stops 19<<<<<<<<
+path1***********************
+[StopID: S157-34 St-Herald Sq F-BDFM-subway LOCAL 
+Prev: 23 St-S215 	 Next: 42 St-Bryant Pk-S162 
+Transfers: ['S155', 'S156', 'S158', 'S159', 'S243', 'S244', 'S245', 'S246', 'B502', 'B513', 'B530', 'B536', 'B540']  
+Other: 1, 14.0
+, StopID: S215-23 St F-BDFM-subway LOCAL 
+Prev: 14 St-S212 	 Next: 34 St-Herald Sq-S157 
+Transfers: ['S216', 'S217', 'B1052', 'B1101']  
+Other: 0, 13.0
+, StopID: S212-14 St F-BDFM-subway LOCAL 
+Prev: W 4 St-Wash Sq-S152 	 Next: 23 St-S215 
+Transfers: ['S10', 'S11', 'S12', 'S213', 'S214', 'S235', 'B1049', 'B1098']  
+Other: 0, 13.0
+, StopID: S152-W 4 St-Wash Sq F-BDFM-subway LOCAL 
+Prev: Broadway-Lafayette St-S147 	 Next: 14 St-S212 
+Transfers: ['S114', 'S115', 'S116', 'S150', 'S151', 'S153', 'S154', 'B485']  
+Other: 1, 6.0
+, StopID: S147-Broadway-Lafayette St F-BDFM-subway LOCAL 
+Prev: 2 Av-S210 	 Next: W 4 St-Wash Sq-S152 
+Transfers: ['S89', 'S145', 'S146', 'S148', 'S149', 'B1017']  
+Other: 1, 9.0
+, StopID: S210-2 Av F-BDFM-subway LOCAL 
+Prev: Delancey St-Essex St-S208 	 Next: Broadway-Lafayette St-S147 
+Transfers: ['S211', 'B919']  
+Other: 0, 9.0
+, StopID: S208-Delancey St-Essex St F-BDFM-subway LOCAL 
+Prev: East Broadway-S206 	 Next: 2 Av-S210 
+Transfers: ['S209', 'S230', 'S231', 'B944', 'B956']  
+Other: 0, 7.0
+, StopID: S206-East Broadway F-BDFM-subway LOCAL 
+Prev: NA-NA 	 Next: Delancey St-Essex St-S208 
+Transfers: ['S207']  
+Other: 0, 7.0
+, StopID: S207-East Broadway FX-None-subway LOCAL 
+Prev: NA-NA 	 Next: Delancey St-Essex St-S209 
+Transfers: ['S206']  
+Other: 0, 7.0
+, StopID: S211-2 Av FX-None-subway LOCAL 
+Prev: Delancey St-Essex St-S209 	 Next: Broadway-Lafayette St-S148 
+Transfers: ['S210', 'B919']  
+Other: 0, 9.0
+, StopID: B919-E HOUSTON ST/FORSYTH ST M21-M21-bus LOCAL 
+Prev: E HOUSTON ST/BOWERY-B918 	 Next: E HOUSTON ST/ESSEX ST-B957 
+Transfers: ['S210', 'S211']  
+Other: 1, 5.0
+, StopID: B957-E HOUSTON ST/ESSEX ST M21-M21-bus LOCAL 
+Prev: E HOUSTON ST/FORSYTH ST-B919 	 Next: E HOUSTON ST/NORFOLK ST-B958 
+Transfers: None  
+Other: 1, 7.0
+, StopID: B958-E HOUSTON ST/NORFOLK ST M21-M21-bus LOCAL 
+Prev: E HOUSTON ST/ESSEX ST-B957 	 Next: E HOUSTON ST/CLINTON ST-B959 
+Transfers: ['B950']  
+Other: 1, 7.0
+, StopID: B959-E HOUSTON ST/CLINTON ST M21-M21-bus LOCAL 
+Prev: E HOUSTON ST/NORFOLK ST-B958 	 Next: E HOUSTON ST/RIDGE ST-B960 
+Transfers: ['B951']  
+Other: 1, 7.0
+, StopID: B960-E HOUSTON ST/RIDGE ST M21-M21-bus LOCAL 
+Prev: E HOUSTON ST/CLINTON ST-B959 	 Next: E HOUSTON ST/COLUMBIA ST-B961 
+Transfers: ['B952']  
+Other: 1, 7.0
+, StopID: B961-E HOUSTON ST/COLUMBIA ST M21-M21-bus LOCAL 
+Prev: E HOUSTON ST/RIDGE ST-B960 	 Next: E HOUSTON ST/BARUCH DR-B962 
+Transfers: ['B966']  
+Other: 1, 7.0
+, StopID: B962-E HOUSTON ST/BARUCH DR M21-M21-bus LOCAL 
+Prev: E HOUSTON ST/COLUMBIA ST-B961 	 Next: E HOUSTON ST/MANGIN ST-B963 
+Transfers: None  
+Other: 1, 7.0
+, StopID: B963-E HOUSTON ST/MANGIN ST M21-M21-bus LOCAL 
+Prev: E HOUSTON ST/BARUCH DR-B962 	 Next: F. D. R. DRIVE/555 FDR DR-B964 
+Transfers: ['B967']  
+Other: 1, 7.0
+, StopID: B964-F. D. R. DRIVE/555 FDR DR M21-M21-bus LOCAL 
+Prev: E HOUSTON ST/MANGIN ST-B963 	 Next: GRAND ST/FDR DR-B965 
+Transfers: ['B968']  
+Other: 1, 7.0
+]
+>>>>>> crime h = 0.021855514172502047<<<<<<<<
+>>>>>> transfers_route 2<<<<<<<<
+>>>>>> transfers_mode 1<<<<<<<<
+>>>>>> number of stops 19<<<<<<<<
+path2***********************
+[StopID: S158-34 St-Herald Sq FX-None-subway LOCAL 
+Prev: 23 St-S216 	 Next: 42 St-Bryant Pk-S163 
+Transfers: ['S155', 'S156', 'S157', 'S159', 'S243', 'S244', 'S245', 'S246', 'B502', 'B513', 'B530', 'B536', 'B540']  
+Other: 1, 14.0
+, StopID: S216-23 St FX-None-subway LOCAL 
+Prev: 14 St-S213 	 Next: 34 St-Herald Sq-S158 
+Transfers: ['S215', 'S217', 'B1052', 'B1101']  
+Other: 0, 13.0
+, StopID: S213-14 St FX-None-subway LOCAL 
+Prev: W 4 St-Wash Sq-S153 	 Next: 23 St-S216 
+Transfers: ['S10', 'S11', 'S12', 'S212', 'S214', 'S235', 'B1049', 'B1098']  
+Other: 0, 13.0
+, StopID: S153-W 4 St-Wash Sq FX-None-subway LOCAL 
+Prev: Broadway-Lafayette St-S148 	 Next: 14 St-S213 
+Transfers: ['S114', 'S115', 'S116', 'S150', 'S151', 'S152', 'S154', 'B485']  
+Other: 1, 6.0
+, StopID: S148-Broadway-Lafayette St FX-None-subway LOCAL 
+Prev: 2 Av-S211 	 Next: W 4 St-Wash Sq-S153 
+Transfers: ['S89', 'S145', 'S146', 'S147', 'S149', 'B1017']  
+Other: 1, 9.0
+, StopID: S211-2 Av FX-None-subway LOCAL 
+Prev: Delancey St-Essex St-S209 	 Next: Broadway-Lafayette St-S148 
+Transfers: ['S210', 'B919']  
+Other: 0, 9.0
+, StopID: S209-Delancey St-Essex St FX-None-subway LOCAL 
+Prev: East Broadway-S207 	 Next: 2 Av-S211 
+Transfers: ['S208', 'S230', 'S231', 'B944', 'B956']  
+Other: 0, 7.0
+, StopID: S207-East Broadway FX-None-subway LOCAL 
+Prev: NA-NA 	 Next: Delancey St-Essex St-S209 
+Transfers: ['S206']  
+Other: 0, 7.0
+, StopID: S206-East Broadway F-BDFM-subway LOCAL 
+Prev: NA-NA 	 Next: Delancey St-Essex St-S208 
+Transfers: ['S207']  
+Other: 0, 7.0
+, StopID: S210-2 Av F-BDFM-subway LOCAL 
+Prev: Delancey St-Essex St-S208 	 Next: Broadway-Lafayette St-S147 
+Transfers: ['S211', 'B919']  
+Other: 0, 9.0
+, StopID: B919-E HOUSTON ST/FORSYTH ST M21-M21-bus LOCAL 
+Prev: E HOUSTON ST/BOWERY-B918 	 Next: E HOUSTON ST/ESSEX ST-B957 
+Transfers: ['S210', 'S211']  
+Other: 1, 5.0
+, StopID: B957-E HOUSTON ST/ESSEX ST M21-M21-bus LOCAL 
+Prev: E HOUSTON ST/FORSYTH ST-B919 	 Next: E HOUSTON ST/NORFOLK ST-B958 
+Transfers: None  
+Other: 1, 7.0
+, StopID: B958-E HOUSTON ST/NORFOLK ST M21-M21-bus LOCAL 
+Prev: E HOUSTON ST/ESSEX ST-B957 	 Next: E HOUSTON ST/CLINTON ST-B959 
+Transfers: ['B950']  
+Other: 1, 7.0
+, StopID: B959-E HOUSTON ST/CLINTON ST M21-M21-bus LOCAL 
+Prev: E HOUSTON ST/NORFOLK ST-B958 	 Next: E HOUSTON ST/RIDGE ST-B960 
+Transfers: ['B951']  
+Other: 1, 7.0
+, StopID: B960-E HOUSTON ST/RIDGE ST M21-M21-bus LOCAL 
+Prev: E HOUSTON ST/CLINTON ST-B959 	 Next: E HOUSTON ST/COLUMBIA ST-B961 
+Transfers: ['B952']  
+Other: 1, 7.0
+, StopID: B961-E HOUSTON ST/COLUMBIA ST M21-M21-bus LOCAL 
+Prev: E HOUSTON ST/RIDGE ST-B960 	 Next: E HOUSTON ST/BARUCH DR-B962 
+Transfers: ['B966']  
+Other: 1, 7.0
+, StopID: B962-E HOUSTON ST/BARUCH DR M21-M21-bus LOCAL 
+Prev: E HOUSTON ST/COLUMBIA ST-B961 	 Next: E HOUSTON ST/MANGIN ST-B963 
+Transfers: None  
+Other: 1, 7.0
+, StopID: B963-E HOUSTON ST/MANGIN ST M21-M21-bus LOCAL 
+Prev: E HOUSTON ST/BARUCH DR-B962 	 Next: F. D. R. DRIVE/555 FDR DR-B964 
+Transfers: ['B967']  
+Other: 1, 7.0
+, StopID: B964-F. D. R. DRIVE/555 FDR DR M21-M21-bus LOCAL 
+Prev: E HOUSTON ST/MANGIN ST-B963 	 Next: GRAND ST/FDR DR-B965 
+Transfers: ['B968']  
+Other: 1, 7.0
+]
+>>>>>> crime h = 0.021855514172502047<<<<<<<<
+>>>>>> transfers_route 2<<<<<<<<
+>>>>>> transfers_mode 1<<<<<<<<
+>>>>>> number of stops 19<<<<<<<<
