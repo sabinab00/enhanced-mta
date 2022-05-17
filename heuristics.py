@@ -41,7 +41,7 @@ def route_check(curr_stop, destination):
         if curr_stop.route_id in destination.line:
             # checks for same line because routes in the same line
             # mostly shares the same stops
-            heuristic += .0025
+            heuristic += .002
 
     # checking neighborhood leads to going backwards so don't really want that
     # nbdh = expand(curr_stop)
@@ -61,7 +61,7 @@ def express_check(curr_stop):
 def transfer_check(curr_stop):
     '''penalizes transfers route and modal transfers'''
     h = curr_stop.n_transfer_route*3 + 2*curr_stop.n_transfer_mode
-    return h*0.0005
+    return h*0.01
     
 def crime_check(curr_stop):
     ''' 
