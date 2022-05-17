@@ -71,20 +71,23 @@ with open('tests.txt') as file:
             f.write('------------------------'+'\n')
             paths = test(a, mode, g, start, end)
                         
-            for p in paths:
-                crime = 0
-                path = p[0]
-                f.write(f'path{count}***********************'+'\n')
-                count+=1
-                f.write(str(path)+'\n')
-                for stops in path:
-                    crime += stops.crime_heuristics
-                    # f.write(str(stops)+'\n')
-                f.write('>>>>>> crime h = '+str(crime)+'<<<<<<<<'+'\n')
-                f.write('>>>>>> transfers_route '+str(p[1])+'<<<<<<<<'+'\n')
-                f.write('>>>>>> transfers_mode '+str(p[2])+'<<<<<<<<'+'\n')
-                f.write('>>>>>> number of stops '+str(len(path))+'<<<<<<<<'+'\n')
-            
+            if paths:
+                for p in paths:
+                    crime = 0
+                    path = p[0]
+                    f.write(f'path{count}***********************'+'\n')
+                    count+=1
+                    f.write(str(path)+'\n')
+                    for stops in path:
+                        crime += stops.crime_heuristics
+                        # f.write(str(stops)+'\n')
+                    f.write('>>>>>> crime h = '+str(crime)+'<<<<<<<<'+'\n')
+                    f.write('>>>>>> transfers_route '+str(p[1])+'<<<<<<<<'+'\n')
+                    f.write('>>>>>> transfers_mode '+str(p[2])+'<<<<<<<<'+'\n')
+                    f.write('>>>>>> number of stops '+str(len(path))+'<<<<<<<<'+'\n')
+            else:
+                f.write('***********************'+'\n')
+                f.write('no paths found for: \n'+start+' to '+end+ a+'\n')
 
 
         
