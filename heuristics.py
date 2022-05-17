@@ -1,5 +1,5 @@
 import API_functions
-from NYCT import Node
+# from NYCT import Node
 import pandas as pd
 
 crimesearch = __import__('Crime Search Heuristic')
@@ -15,7 +15,7 @@ def distance(curr_stop: tuple, destination:tuple):
     distance = API_functions.get_distance([curr_stop], [destination])
     return distance
 
-def transit_mode_check(curr_stop: Node, destination:Node):
+def transit_mode_check(curr_stop, destination):
     '''checks if the current and destination'stop are for the same transit type'''
     return 0.005 if curr_stop.transit_type == destination.transit_type else 0
 
@@ -27,7 +27,7 @@ def euclidean_distance(curr_stop: tuple,destination:tuple):
     from scipy.spatial import distance
     return distance.euclidean(curr_stop,destination)
 
-def route_check(curr_stop:Node, destination:Node):
+def route_check(curr_stop, destination):
     ''' 
     Checks the following between the current stop and desination stop:
       - the same route_id 
@@ -50,7 +50,7 @@ def route_check(curr_stop:Node, destination:Node):
     #         if n.route_id in destination.line:
     #             heuristic += 0.0001
     return heuristic
-def express_check(curr_stop:Node):
+def express_check(curr_stop):
     '''
     Checks if the route taken at the current stop is express or not
     
@@ -58,12 +58,12 @@ def express_check(curr_stop:Node):
     express = curr_stop.express
     return 0 if express else 0.001
 
-def transfer_check(curr_stop: Node):
+def transfer_check(curr_stop):
     '''penalizes transfers route and modal transfers'''
     h = curr_stop.n_transfer_route*3 + 2*curr_stop.n_transfer_mode
     return h*0.0005
     
-def crime_check(curr_stop:Node):
+def crime_check(curr_stop):
     ''' 
     Checks if location is safe given geocode of stop
     '''
@@ -73,7 +73,7 @@ def crime_check(curr_stop:Node):
             heuristic += .0001
     return heuristic
 
-def crime_distance(curr_stop:Node):
+def crime_distance(curr_stop):
 
     distance_1 = euclidean_distance(curr_stop.geocode, (center_1[0],center_1[1]))
     distance_2 = euclidean_distance(curr_stop.geocode, (center_2[0],center_2[1]))
