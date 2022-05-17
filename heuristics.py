@@ -4,8 +4,8 @@ import pandas as pd
 
 crimesearch = __import__('Crime Search Heuristic')
 crime = pd.read_csv(r'datasets\NYPD dataset.csv')
-center_1, center_2, center_3 = crimesearch.cluster(crime)
-
+# center_1, center_2, center_3 = crimesearch.cluster(crime)
+centers,radii = crimesearch.cluster(crime)
 
 def distance(curr_stop: tuple, destination:tuple):
     '''
@@ -75,8 +75,22 @@ def crime_check(curr_stop):
 
 def crime_distance(curr_stop):
 
-    distance_1 = euclidean_distance(curr_stop.geocode, (center_1[0],center_1[1]))
-    distance_2 = euclidean_distance(curr_stop.geocode, (center_2[0],center_2[1]))
-    distance_3 = euclidean_distance(curr_stop.geocode, (center_3[0],center_3[1]))
+    # distance_1 = euclidean_distance(curr_stop.geocode, (center_1[0],center_1[1]))
+    # distance_2 = euclidean_distance(curr_stop.geocode, (center_2[0],center_2[1]))
+    # distance_3 = euclidean_distance(curr_stop.geocode, (center_3[0],center_3[1]))
 
-    return min(distance_1, distance_2,distance_3)*0.1
+    # return min(distance_1, distance_2,distance_3)*0.1
+    # return kmeansfitted.predict(curr_stop)
+
+    h = 0 
+    for i in range(3):
+        center = centers[i]
+        radius = radii[i]
+
+        distance = euclidean_distance(curr_stop.geocode, (center[0],center[1]))
+        if distance>=radius:
+            h+=0
+        else:
+            h+=radius-distance
+    return h*0.1
+        

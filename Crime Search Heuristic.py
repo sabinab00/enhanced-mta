@@ -2,6 +2,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 sns.set()
 from sklearn.cluster import KMeans
+from scipy.spatial.distance import cdist
 import pandas as pd
 from kneed import KneeLocator
 
@@ -19,11 +20,11 @@ from kneed import KneeLocator
 def cluster(crime):
     x = crime.iloc[:,8:10] # 1t for rows and second for columns
 
-    # fitting kmeans to predict for dataset
-    kmeans = KMeans(5)
-    kmeans.fit(x)
+    # # fitting kmeans to predict for dataset
+    # kmeans = KMeans(5)
+    # kmeans.fit(x)
 
-    clusters = kmeans.fit_predict(x)
+    # clusters = kmeans.fit_predict(x)
 
     # clusters
     wcss=[]
@@ -59,12 +60,14 @@ def cluster(crime):
     # print ("centers: ", centers)
     #plt.scatter(centers[:, 0], centers[:, 1], c='black', alpha=0.5);
 
-    center_1 = centers[0]
-    center_2 = centers[1]
-    center_3 = centers[2]
+    # center_1 = centers[0]
+    # center_2 = centers[1]
+    # center_3 = centers[2]
 
+    radii = [cdist(x[clusters==i],[center],metric='euclidean').max() for i,center in enumerate(centers)]
+    # print(radii)
 
-    return center_1, center_2, center_3
+    return centers, radii
 # def distance(crime_loc_1: tuple, crime_loc_2: tuple, crime_loc_3:tuple, destination:tuple):
 #     '''
 #     takes geocode of crime cluster centers and destination to 
