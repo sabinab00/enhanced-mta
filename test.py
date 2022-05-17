@@ -41,18 +41,19 @@ def test(access, mode, g, start, end):
 
     if rad <0.01:
         sorted_paths  = helper.findTopPath(paths_found)
+
         print(f'We found {len(sorted_paths)} routes, here are the top 3:')
         for path in sorted_paths[:3]:
             print('------------')
             p = path[0]
             print(len(p), path[1], path[2])
             print(p)
-
-        return sorted_paths
+            
+        return sorted_paths[:3]
     else:
         return None
             
-f = open('test-output.txt','a')
+f = open('test-output-newh.txt','a')
 
 with open('tests.txt') as file:
     for line in file:
@@ -60,22 +61,29 @@ with open('tests.txt') as file:
         start, end= line.rstrip().split(';')
         print(f'Starting point: {start}')
         print(f'Ending point: {end}')
+        count = 0
         for a in accessibility:
-            paths = test(a, mode, g, start, end)
+            
             f.write('------------------------'+'\n')
             f.write('start:'+start+'\n')
             f.write('end: '+end+'\n')
             f.write('accessibility: '+a+'\n')
-            f.write('------------------------'+'\n')            
+            f.write('------------------------'+'\n')
+            paths = test(a, mode, g, start, end)
+                        
             for p in paths:
                 crime = 0
                 path = p[0]
+                f.write(f'path{count}***********************'+'\n')
+                count+=1
+                f.write(str(path)+'\n')
                 for stops in path:
                     crime += stops.crime_heuristics
-                    f.write(str(stops)+'\n')
-                f.write('>>>>>> crime h= '+str(crime)+'<<<<<<<<'+'\n')
-                f.write('>>>>>> transfers_route'+str(p[1])+'<<<<<<<<'+'\n')
-                f.write('>>>>>> transfers_mode'+str(p[2])+'<<<<<<<<'+'\n')
+                    # f.write(str(stops)+'\n')
+                f.write('>>>>>> crime h = '+str(crime)+'<<<<<<<<'+'\n')
+                f.write('>>>>>> transfers_route '+str(p[1])+'<<<<<<<<'+'\n')
+                f.write('>>>>>> transfers_mode '+str(p[2])+'<<<<<<<<'+'\n')
+                f.write('>>>>>> number of stops '+str(len(path))+'<<<<<<<<'+'\n')
             
 
 

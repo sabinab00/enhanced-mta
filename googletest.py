@@ -5,9 +5,9 @@ import heuristics
 
 g= NYCT.Graph()
 #test=["7 State St, New York, NY 10004|199 Chambers St, New York, NY 10007|S0,S4,3|n","365 5th Ave, New York, NY 10016|1234 E 6th St, New York, NY 10009|S244,S240,3|B436,B999,10|n"]
-f = open('test2-output.txt','a')
+f = open('googletest-output-newh2.txt','a')
 
-with open("googletext.txt") as file:
+with open("googletest.txt") as file:
     for t in file:
         #initializing variables
         tt=t.split("|")
@@ -56,8 +56,9 @@ with open("googletext.txt") as file:
         for p in path:
             f.write(str(p)+"\n")
         f.write('>>>>>> crime h= '+str(crime)+'<<<<<<<<'+'\n')
-        f.write('>>>>>> transfers_route'+str(transfers_route-1)+'<<<<<<<<'+'\n')
-        f.write('>>>>>> transfers_mode'+str(len(transfers_mode)-1)+'<<<<<<<<'+'\n')
+        f.write('>>>>>> transfers_route '+str(transfers_route-1)+'<<<<<<<<'+'\n')
+        f.write('>>>>>> transfers_mode '+str(len(transfers_mode)-1)+'<<<<<<<<'+'\n')
+        f.write('>>>>>> number of stops '+str(len(path))+'<<<<<<<<'+'\n')
     
     
 

@@ -1,0 +1,558 @@
++++++++++++++++++++++++++++++++++++++
+------------------------
+start:7 State St, New York, NY 10004
+end: 199 Chambers St, New York, NY 10007
+accessibility: y
+
+------------------------
+StopID: B872-STATE ST/WHITEHALL ST M20-M20-bus LOCAL 
+Prev: NA-NA 	 Next: STATE ST/BRIDGE ST-B873 
+Transfers: ['B892', 'S0', 'S267', 'S268']  
+Other: 1, 1.0
+
+StopID: B873-STATE ST/BRIDGE ST M20-M20-bus LOCAL 
+Prev: STATE ST/WHITEHALL ST-B872 	 Next: BATTERY PL/WEST ST-B874 
+Transfers: ['B893', 'S63', 'S64']  
+Other: 1, 1.0
+
+StopID: B874-BATTERY PL/WEST ST M20-M20-bus LOCAL 
+Prev: STATE ST/BRIDGE ST-B873 	 Next: BATTERY PL/3 PL-B875 
+Transfers: None  
+Other: 1, 1.0
+
+StopID: B875-BATTERY PL/3 PL M20-M20-bus LOCAL 
+Prev: BATTERY PL/WEST ST-B874 	 Next: WEST THAMES ST/SOUTH END AV-B870 
+Transfers: None  
+Other: 1, 1.0
+
+StopID: B870-WEST THAMES ST/SOUTH END AV M20-M20-bus LOCAL 
+Prev: BATTERY PL/3 PL-B875 	 Next: SOUTH END AV/ALBANY ST-B871 
+Transfers: None  
+Other: 1, 1.0
+
+StopID: B871-SOUTH END AV/ALBANY ST M20-M20-bus LOCAL 
+Prev: WEST THAMES ST/SOUTH END AV-B870 	 Next: MURRAY ST/NORTH END AV-B876 
+Transfers: ['B866']  
+Other: 1, 1.0
+
+StopID: B876-MURRAY ST/NORTH END AV M20-M20-bus LOCAL 
+Prev: SOUTH END AV/ALBANY ST-B871 	 Next: NORTH END AV/WARREN ST-B869 
+Transfers: None  
+Other: 1, 1.0
+
+StopID: B869-NORTH END AV/WARREN ST M20-M20-bus LOCAL 
+Prev: MURRAY ST/NORTH END AV-B876 	 Next: WEST ST/CHAMBERS ST-B877 
+Transfers: ['B857']  
+Other: 1, 1.0
+
+StopID: B877-WEST ST/CHAMBERS ST M20-M20-bus LOCAL 
+Prev: NORTH END AV/WARREN ST-B869 	 Next: HARRISON ST/WEST ST-B878 
+Transfers: None  
+Other: 1, 1.0
+
+StopID: B878-HARRISON ST/WEST ST M20-M20-bus LOCAL 
+Prev: WEST ST/CHAMBERS ST-B877 	 Next: HARRISON ST/HUDSON ST-B879 
+Transfers: None  
+Other: 1, 1.0
+
+>>>>>> crime h= 0.005089046431812282<<<<<<<<
+>>>>>> transfers_route 0<<<<<<<<
+>>>>>> transfers_mode 0<<<<<<<<
+>>>>>> number of stops 10<<<<<<<<
++++++++++++++++++++++++++++++++++++++
+------------------------
+start:7 State St, New York, NY 10004
+end: 199 Chambers St, New York, NY 10007
+accessibility: n
+
+------------------------
+StopID: S0-South Ferry 1-123-subway LOCAL 
+Prev: NA-NA 	 Next: Rector St-S1 
+Transfers: ['B847', 'B872', 'B892']  
+Other: 1, 1.0
+
+StopID: S1-Rector St 1-123-subway LOCAL 
+Prev: South Ferry-S0 	 Next: WTC Cortlandt-S2 
+Transfers: None  
+Other: 0, 1.0
+
+StopID: S2-WTC Cortlandt 1-123-subway LOCAL 
+Prev: Rector St-S1 	 Next: Chambers St-S3 
+Transfers: None  
+Other: 1, 1.0
+
+StopID: S3-Chambers St 1-123-subway LOCAL 
+Prev: WTC Cortlandt-S2 	 Next: Franklin St-S6 
+Transfers: ['S4', 'S5', 'B859']  
+Other: 1, 1.0
+
+>>>>>> crime h= 0.0025068745042192866<<<<<<<<
+>>>>>> transfers_route 0<<<<<<<<
+>>>>>> transfers_mode 0<<<<<<<<
+>>>>>> number of stops 4<<<<<<<<
++++++++++++++++++++++++++++++++++++++
+------------------------
+start:1901 1st Ave., New York, NY 10029
+end: 390 7th Ave, New York, NY 10001
+accessibility: y
+
+------------------------
+StopID: S266-96 St Q-NQRW-subway EXPRESS 
+Prev: 86 St-S265 	 Next: NA-NA 
+Transfers: ['B400']  
+Other: 1, 23.0
+
+StopID: S265-86 St Q-NQRW-subway EXPRESS 
+Prev: 72 St-S264 	 Next: 96 St-S266 
+Transfers: ['B360']  
+Other: 1, 19.0
+
+StopID: S264-72 St Q-NQRW-subway EXPRESS 
+Prev: Lexington Av/63 St-S222 	 Next: 86 St-S265 
+Transfers: ['B262']  
+Other: 1, 19.0
+
+StopID: S222-Lexington Av/63 St Q-NQRW-subway EXPRESS 
+Prev: 57 St-7 Av-S255 	 Next: 72 St-S264 
+Transfers: ['S78', 'S79', 'S80', 'S220', 'S221', 'S261', 'S262', 'S263']  
+Other: 1, 19.0
+
+StopID: S255-57 St-7 Av Q-NQRW-subway EXPRESS 
+Prev: Times Sq-42 St-S248 	 Next: Lexington Av/63 St-S222 
+Transfers: ['S254', 'S256', 'S257', 'B81', 'B97']  
+Other: 1, 18.0
+
+StopID: S248-Times Sq-42 St Q-NQRW-subway EXPRESS 
+Prev: 34 St-Herald Sq-S244 	 Next: 57 St-7 Av-S255 
+Transfers: ['S19', 'S20', 'S21', 'S102', 'S106', 'S123', 'S124', 'S125', 'S247', 'S249', 'S250']  
+Other: 1, 14.0
+
+StopID: S244-34 St-Herald Sq Q-NQRW-subway EXPRESS 
+Prev: 14 St-Union Sq-S240 	 Next: Times Sq-42 St-S248 
+Transfers: ['S155', 'S156', 'S157', 'S158', 'S159', 'S243', 'S245', 'S246', 'B502', 'B513', 'B530', 'B536', 'B540']  
+Other: 1, 14.0
+
+>>>>>> crime h= 0.02021720768479535<<<<<<<<
+>>>>>> transfers_route 0<<<<<<<<
+>>>>>> transfers_mode 0<<<<<<<<
+>>>>>> number of stops 7<<<<<<<<
++++++++++++++++++++++++++++++++++++++
+------------------------
+start:1901 1st Ave., New York, NY 10029
+end: 390 7th Ave, New York, NY 10001
+accessibility: n
+
+------------------------
+StopID: S266-96 St Q-NQRW-subway EXPRESS 
+Prev: 86 St-S265 	 Next: NA-NA 
+Transfers: ['B400']  
+Other: 1, 23.0
+
+StopID: S265-86 St Q-NQRW-subway EXPRESS 
+Prev: 72 St-S264 	 Next: 96 St-S266 
+Transfers: ['B360']  
+Other: 1, 19.0
+
+StopID: S264-72 St Q-NQRW-subway EXPRESS 
+Prev: Lexington Av/63 St-S222 	 Next: 86 St-S265 
+Transfers: ['B262']  
+Other: 1, 19.0
+
+StopID: S222-Lexington Av/63 St Q-NQRW-subway EXPRESS 
+Prev: 57 St-7 Av-S255 	 Next: 72 St-S264 
+Transfers: ['S78', 'S79', 'S80', 'S220', 'S221', 'S261', 'S262', 'S263']  
+Other: 1, 19.0
+
+StopID: S255-57 St-7 Av Q-NQRW-subway EXPRESS 
+Prev: Times Sq-42 St-S248 	 Next: Lexington Av/63 St-S222 
+Transfers: ['S254', 'S256', 'S257', 'B81', 'B97']  
+Other: 1, 18.0
+
+StopID: S248-Times Sq-42 St Q-NQRW-subway EXPRESS 
+Prev: 34 St-Herald Sq-S244 	 Next: 57 St-7 Av-S255 
+Transfers: ['S19', 'S20', 'S21', 'S102', 'S106', 'S123', 'S124', 'S125', 'S247', 'S249', 'S250']  
+Other: 1, 14.0
+
+StopID: S244-34 St-Herald Sq Q-NQRW-subway EXPRESS 
+Prev: 14 St-Union Sq-S240 	 Next: Times Sq-42 St-S248 
+Transfers: ['S155', 'S156', 'S157', 'S158', 'S159', 'S243', 'S245', 'S246', 'B502', 'B513', 'B530', 'B536', 'B540']  
+Other: 1, 14.0
+
+>>>>>> crime h= 0.02021720768479535<<<<<<<<
+>>>>>> transfers_route 0<<<<<<<<
+>>>>>> transfers_mode 0<<<<<<<<
+>>>>>> number of stops 7<<<<<<<<
++++++++++++++++++++++++++++++++++++++
+------------------------
+start:150 Central Park S, New York, NY 10019
+end: 613 W 155th St, New York, NY 10032
+accessibility: y
+
+------------------------
+StopID: B644-CENTRAL PK S/7 AV M5-M5-bus LOCAL 
+Prev: CENTRAL PK S/6 AV-B643 	 Next: CENTRAL PK S/COLUMBUS CI-B645 
+Transfers: ['B650']  
+Other: 1, 22.0
+
+StopID: B645-CENTRAL PK S/COLUMBUS CI M5-M5-bus LOCAL 
+Prev: CENTRAL PK S/7 AV-B644 	 Next: BROADWAY/W 61 ST-B16 
+Transfers: ['B651', 'S23', 'S126', 'S127', 'S128', 'S129']  
+Other: 1, 22.0
+
+StopID: B16-BROADWAY/W 61 ST M5-M5-bus LOCAL 
+Prev: CENTRAL PK S/COLUMBUS CI-B645 	 Next: BROADWAY/W 63 ST-B17 
+Transfers: ['B30', 'B50']  
+Other: 1, 20.0
+
+StopID: B17-BROADWAY/W 63 ST M5-M5-bus LOCAL 
+Prev: BROADWAY/W 61 ST-B16 	 Next: BROADWAY/W 66 ST-B18 
+Transfers: ['B31', 'B51']  
+Other: 1, 20.0
+
+StopID: B18-BROADWAY/W 66 ST M5-M5-bus LOCAL 
+Prev: BROADWAY/W 63 ST-B17 	 Next: BROADWAY/W 69 ST-B19 
+Transfers: ['B32', 'B52', 'S24']  
+Other: 1, 20.0
+
+StopID: B19-BROADWAY/W 69 ST M5-M5-bus LOCAL 
+Prev: BROADWAY/W 66 ST-B18 	 Next: W 72 ST/BROADWAY-B15 
+Transfers: ['B33', 'B53']  
+Other: 1, 20.0
+
+StopID: B15-W 72 ST/BROADWAY M5-M5-bus LOCAL 
+Prev: BROADWAY/W 69 ST-B19 	 Next: W 72 ST/WEST END AV-B20 
+Transfers: ['B0']  
+Other: 1, 20.0
+
+StopID: B20-W 72 ST/WEST END AV M5-M5-bus LOCAL 
+Prev: W 72 ST/BROADWAY-B15 	 Next: RIVERSIDE DR/W 74 ST-B21 
+Transfers: None  
+Other: 1, 20.0
+
+StopID: B21-RIVERSIDE DR/W 74 ST M5-M5-bus LOCAL 
+Prev: W 72 ST/WEST END AV-B20 	 Next: RIVERSIDE DR/W 77 ST-B22 
+Transfers: None  
+Other: 1, 20.0
+
+StopID: B22-RIVERSIDE DR/W 77 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 74 ST-B21 	 Next: RIVERSIDE DR/W 79 ST-B23 
+Transfers: None  
+Other: 1, 20.0
+
+StopID: B23-RIVERSIDE DR/W 79 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 77 ST-B22 	 Next: RIVERSIDE DR/W 82 ST-B24 
+Transfers: None  
+Other: 1, 20.0
+
+StopID: B24-RIVERSIDE DR/W 82 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 79 ST-B23 	 Next: RIVERSIDE DR/W 85 ST-B25 
+Transfers: None  
+Other: 1, 20.0
+
+StopID: B25-RIVERSIDE DR/W 85 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 82 ST-B24 	 Next: RIVERSIDE DR/W 87 ST-B677 
+Transfers: None  
+Other: 1, 20.0
+
+StopID: B677-RIVERSIDE DR/W 87 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 85 ST-B25 	 Next: RIVERSIDE DR/W 89 ST-B678 
+Transfers: None  
+Other: 1, 24.0
+
+StopID: B678-RIVERSIDE DR/W 89 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 87 ST-B677 	 Next: RIVERSIDE DR/W 91 ST-B679 
+Transfers: None  
+Other: 1, 24.0
+
+StopID: B679-RIVERSIDE DR/W 91 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 89 ST-B678 	 Next: RIVERSIDE DR/W 94 ST-B680 
+Transfers: None  
+Other: 1, 24.0
+
+StopID: B680-RIVERSIDE DR/W 94 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 91 ST-B679 	 Next: RIVERSIDE DR/W 97 ST-B681 
+Transfers: None  
+Other: 1, 24.0
+
+StopID: B681-RIVERSIDE DR/W 97 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 94 ST-B680 	 Next: RIVERSIDE DR/W 100 ST-B682 
+Transfers: None  
+Other: 1, 24.0
+
+StopID: B682-RIVERSIDE DR/W 100 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 97 ST-B681 	 Next: RIVERSIDE DR/W 103 ST-B683 
+Transfers: None  
+Other: 1, 24.0
+
+StopID: B683-RIVERSIDE DR/W 103 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 100 ST-B682 	 Next: RIVERSIDE DR/W 106 ST-B684 
+Transfers: None  
+Other: 1, 24.0
+
+StopID: B684-RIVERSIDE DR/W 106 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 103 ST-B683 	 Next: RIVERSIDE DR/W 108 ST-B685 
+Transfers: None  
+Other: 1, 24.0
+
+StopID: B685-RIVERSIDE DR/W 108 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 106 ST-B684 	 Next: RIVERSIDE DR/W 112 ST-B736 
+Transfers: None  
+Other: 1, 24.0
+
+StopID: B736-RIVERSIDE DR/W 112 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 108 ST-B685 	 Next: RIVERSIDE DR/W 114 ST-B737 
+Transfers: None  
+Other: 1, 26.0
+
+StopID: B737-RIVERSIDE DR/W 114 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 112 ST-B736 	 Next: RIVERSIDE DR/W 116 ST-B738 
+Transfers: None  
+Other: 1, 26.0
+
+StopID: B738-RIVERSIDE DR/W 116 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 114 ST-B737 	 Next: RIVERSIDE DR/W 119 ST-B739 
+Transfers: None  
+Other: 1, 26.0
+
+StopID: B739-RIVERSIDE DR/W 119 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 116 ST-B738 	 Next: RIVERSIDE DR/W 122 ST-B740 
+Transfers: None  
+Other: 1, 26.0
+
+StopID: B740-RIVERSIDE DR/W 122 ST M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 119 ST-B739 	 Next: RIVERSIDE DR/TIEMANN PL-B741 
+Transfers: None  
+Other: 1, 26.0
+
+StopID: B741-RIVERSIDE DR/TIEMANN PL M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/W 122 ST-B740 	 Next: W 135 ST/RIVERSIDE DR-B567 
+Transfers: None  
+Other: 1, 26.0
+
+StopID: B567-W 135 ST/RIVERSIDE DR M5-M5-bus LOCAL 
+Prev: RIVERSIDE DR/TIEMANN PL-B741 	 Next: BROADWAY/W 135 ST-B557 
+Transfers: None  
+Other: 1, 30.0
+
+StopID: B557-BROADWAY/W 135 ST M5-M5-bus LOCAL 
+Prev: W 135 ST/RIVERSIDE DR-B567 	 Next: BROADWAY/W 137 ST-B558 
+Transfers: ['B581']  
+Other: 1, 30.0
+
+StopID: B558-BROADWAY/W 137 ST M5-M5-bus LOCAL 
+Prev: BROADWAY/W 135 ST-B557 	 Next: BROADWAY/W 139 ST-B559 
+Transfers: ['B582', 'S37']  
+Other: 1, 30.0
+
+>>>>>> crime h= 0.11080257716468908<<<<<<<<
+>>>>>> transfers_route 0<<<<<<<<
+>>>>>> transfers_mode 0<<<<<<<<
+>>>>>> number of stops 31<<<<<<<<
++++++++++++++++++++++++++++++++++++++
+------------------------
+start:150 Central Park S, New York, NY 10019
+end: 613 W 155th St, New York, NY 10032
+accessibility: n
+
+------------------------
+StopID: S23-59 St-Columbus Circle 1-123-subway LOCAL 
+Prev: 50 St-S22 	 Next: 66 St-Lincoln Center-S24 
+Transfers: ['S126', 'S127', 'S128', 'S129', 'B645', 'B646', 'B647', 'B651', 'B652', 'B653', 'B674']  
+Other: 1, 18.0
+
+StopID: S24-66 St-Lincoln Center 1-123-subway LOCAL 
+Prev: 59 St-Columbus Circle-S23 	 Next: 72 St-S25 
+Transfers: ['B18', 'B27', 'B32', 'B52', 'B63', 'B64']  
+Other: 1, 20.0
+
+StopID: S25-72 St 1-123-subway LOCAL 
+Prev: 66 St-Lincoln Center-S24 	 Next: 79 St-S28 
+Transfers: ['S26', 'S27', 'B10', 'B34', 'B45']  
+Other: 1, 20.0
+
+StopID: S28-79 St 1-123-subway LOCAL 
+Prev: 72 St-S25 	 Next: 86 St-S29 
+Transfers: ['B57', 'B67']  
+Other: 0, 20.0
+
+StopID: S29-86 St 1-123-subway LOCAL 
+Prev: 79 St-S28 	 Next: 96 St-S30 
+Transfers: ['B72', 'B710']  
+Other: 0, 24.0
+
+StopID: S30-96 St 1-123-subway LOCAL 
+Prev: 86 St-S29 	 Next: 103 St-S33 
+Transfers: ['S31', 'S32']  
+Other: 1, 24.0
+
+StopID: S33-103 St 1-123-subway LOCAL 
+Prev: 96 St-S30 	 Next: Cathedral Pkwy (110 St)-S34 
+Transfers: ['B717']  
+Other: 0, 24.0
+
+StopID: S34-Cathedral Pkwy (110 St) 1-123-subway LOCAL 
+Prev: 103 St-S33 	 Next: 116 St-Columbia University-S35 
+Transfers: ['B719', 'B758', 'B766']  
+Other: 0, 24.0
+
+StopID: S35-116 St-Columbia University 1-123-subway LOCAL 
+Prev: Cathedral Pkwy (110 St)-S34 	 Next: 125 St-S36 
+Transfers: ['B752', 'B761', 'B773']  
+Other: 0, 26.0
+
+StopID: S36-125 St 1-123-subway LOCAL 
+Prev: 116 St-Columbia University-S35 	 Next: 137 St-City College-S37 
+Transfers: ['B757', 'B770']  
+Other: 0, 26.0
+
+StopID: S37-137 St-City College 1-123-subway LOCAL 
+Prev: 125 St-S36 	 Next: 145 St-S38 
+Transfers: ['B558', 'B582']  
+Other: 0, 30.0
+
+StopID: S38-145 St 1-123-subway LOCAL 
+Prev: 137 St-City College-S37 	 Next: 157 St-S39 
+Transfers: ['B562', 'B586']  
+Other: 0, 30.0
+
+StopID: S39-157 St 1-123-subway LOCAL 
+Prev: 145 St-S38 	 Next: 168 St-Washington Hts-S40 
+Transfers: ['B596', 'B624']  
+Other: 0, 33.0
+
+>>>>>> crime h= 0.05117549639704141<<<<<<<<
+>>>>>> transfers_route 0<<<<<<<<
+>>>>>> transfers_mode 0<<<<<<<<
+>>>>>> number of stops 13<<<<<<<<
++++++++++++++++++++++++++++++++++++++
+------------------------
+start:365 5th Ave, New York, NY 10016
+end: 1234 E 6th St, New York, NY 10009
+accessibility: y
+
+------------------------
+StopID: B436-9 AV/W 18 ST M14D+-M14D+-bus EXPRESS 
+Prev: W 18 ST / 10 AV-B435 	 Next: W 14 ST/HUDSON ST-B482 
+Transfers: None  
+Other: 1, 10.0
+
+StopID: B482-W 14 ST/HUDSON ST M14D+-M14D+-bus EXPRESS 
+Prev: 9 AV/W 18 ST-B436 	 Next: W 14 ST/8 AV-B478 
+Transfers: None  
+Other: 1, 6.0
+
+StopID: B478-W 14 ST/8 AV M14D+-M14D+-bus EXPRESS 
+Prev: W 14 ST/HUDSON ST-B482 	 Next: W 14 ST/7 AV-B479 
+Transfers: ['B468', 'S236']  
+Other: 1, 6.0
+
+StopID: B479-W 14 ST/7 AV M14D+-M14D+-bus EXPRESS 
+Prev: W 14 ST/8 AV-B478 	 Next: W 14 ST/6 AV-B480 
+Transfers: ['B469']  
+Other: 1, 6.0
+
+StopID: B480-W 14 ST/6 AV M14D+-M14D+-bus EXPRESS 
+Prev: W 14 ST/7 AV-B479 	 Next: E 14 ST/UNIVERSITY PL-B481 
+Transfers: ['B470', 'S235']  
+Other: 1, 6.0
+
+StopID: B481-E 14 ST/UNIVERSITY PL M14D+-M14D+-bus EXPRESS 
+Prev: W 14 ST/6 AV-B480 	 Next: E 14 ST/IRVING PL-B992 
+Transfers: ['B471']  
+Other: 1, 6.0
+
+StopID: B992-E 14 ST/IRVING PL M14D+-M14D+-bus EXPRESS 
+Prev: E 14 ST/UNIVERSITY PL-B481 	 Next: E 14 ST/3 AV-B993 
+Transfers: ['B976']  
+Other: 1, 9.0
+
+StopID: B993-E 14 ST/3 AV M14D+-M14D+-bus EXPRESS 
+Prev: E 14 ST/IRVING PL-B992 	 Next: E 14 ST/2 AV-B994 
+Transfers: ['B977', 'S233']  
+Other: 1, 9.0
+
+StopID: B994-E 14 ST/2 AV M14D+-M14D+-bus EXPRESS 
+Prev: E 14 ST/3 AV-B993 	 Next: E 14 ST/1 AV-B995 
+Transfers: ['B978']  
+Other: 1, 9.0
+
+StopID: B995-E 14 ST/1 AV M14D+-M14D+-bus EXPRESS 
+Prev: E 14 ST/2 AV-B994 	 Next: E 14 ST/AV A-B996 
+Transfers: ['B979', 'S232']  
+Other: 1, 9.0
+
+StopID: B996-E 14 ST/AV A M14D+-M14D+-bus EXPRESS 
+Prev: E 14 ST/1 AV-B995 	 Next: E 14 ST/AV B-B997 
+Transfers: None  
+Other: 1, 9.0
+
+>>>>>> crime h= 0.016038682976963044<<<<<<<<
+>>>>>> transfers_route 1<<<<<<<<
+>>>>>> transfers_mode 1<<<<<<<<
+>>>>>> number of stops 11<<<<<<<<
++++++++++++++++++++++++++++++++++++++
+------------------------
+start:365 5th Ave, New York, NY 10016
+end: 1234 E 6th St, New York, NY 10009
+accessibility: n
+
+------------------------
+StopID: B436-9 AV/W 18 ST M14D+-M14D+-bus EXPRESS 
+Prev: W 18 ST / 10 AV-B435 	 Next: W 14 ST/HUDSON ST-B482 
+Transfers: None  
+Other: 1, 10.0
+
+StopID: B482-W 14 ST/HUDSON ST M14D+-M14D+-bus EXPRESS 
+Prev: 9 AV/W 18 ST-B436 	 Next: W 14 ST/8 AV-B478 
+Transfers: None  
+Other: 1, 6.0
+
+StopID: B478-W 14 ST/8 AV M14D+-M14D+-bus EXPRESS 
+Prev: W 14 ST/HUDSON ST-B482 	 Next: W 14 ST/7 AV-B479 
+Transfers: ['B468', 'S236']  
+Other: 1, 6.0
+
+StopID: B479-W 14 ST/7 AV M14D+-M14D+-bus EXPRESS 
+Prev: W 14 ST/8 AV-B478 	 Next: W 14 ST/6 AV-B480 
+Transfers: ['B469']  
+Other: 1, 6.0
+
+StopID: B480-W 14 ST/6 AV M14D+-M14D+-bus EXPRESS 
+Prev: W 14 ST/7 AV-B479 	 Next: E 14 ST/UNIVERSITY PL-B481 
+Transfers: ['B470', 'S235']  
+Other: 1, 6.0
+
+StopID: B481-E 14 ST/UNIVERSITY PL M14D+-M14D+-bus EXPRESS 
+Prev: W 14 ST/6 AV-B480 	 Next: E 14 ST/IRVING PL-B992 
+Transfers: ['B471']  
+Other: 1, 6.0
+
+StopID: B992-E 14 ST/IRVING PL M14D+-M14D+-bus EXPRESS 
+Prev: E 14 ST/UNIVERSITY PL-B481 	 Next: E 14 ST/3 AV-B993 
+Transfers: ['B976']  
+Other: 1, 9.0
+
+StopID: B993-E 14 ST/3 AV M14D+-M14D+-bus EXPRESS 
+Prev: E 14 ST/IRVING PL-B992 	 Next: E 14 ST/2 AV-B994 
+Transfers: ['B977', 'S233']  
+Other: 1, 9.0
+
+StopID: B994-E 14 ST/2 AV M14D+-M14D+-bus EXPRESS 
+Prev: E 14 ST/3 AV-B993 	 Next: E 14 ST/1 AV-B995 
+Transfers: ['B978']  
+Other: 1, 9.0
+
+StopID: B995-E 14 ST/1 AV M14D+-M14D+-bus EXPRESS 
+Prev: E 14 ST/2 AV-B994 	 Next: E 14 ST/AV A-B996 
+Transfers: ['B979', 'S232']  
+Other: 1, 9.0
+
+StopID: B996-E 14 ST/AV A M14D+-M14D+-bus EXPRESS 
+Prev: E 14 ST/1 AV-B995 	 Next: E 14 ST/AV B-B997 
+Transfers: None  
+Other: 1, 9.0
+
+>>>>>> crime h= 0.016038682976963044<<<<<<<<
+>>>>>> transfers_route 1<<<<<<<<
+>>>>>> transfers_mode 1<<<<<<<<
+>>>>>> number of stops 11<<<<<<<<
