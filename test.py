@@ -34,26 +34,27 @@ def test(access, mode, g, start, end):
                     found_path = True
                                 
         rad += 0.0005
-        if len(paths_found)<4:
-            # ensures we have three or more paths to sort and pick from
-            found_path=False
-            found_stops=False
+        # if len(paths_found)<4:
+        #     # ensures we have three or more paths to sort and pick from
+        #     found_path=False
+        #     found_stops=False
 
-    if rad <0.01:
-        sorted_paths  = helper.findTopPath(paths_found)
+    
+    sorted_paths  = helper.findTopPath(paths_found)
 
-        print(f'We found {len(sorted_paths)} routes, here are the top 3:')
-        for path in sorted_paths[:3]:
-            print('------------')
-            p = path[0]
-            print(len(p), path[1], path[2])
-            print(p)
-            
-        return sorted_paths[:3]
+    print(f'We found {len(sorted_paths)} routes, here are the top 3:')
+    for path in sorted_paths[:3]:
+        print('------------')
+        p = path[0]
+        print(len(p), path[1], path[2])
+        print(p)
+    if len(sorted_paths)>1:
+        return [sorted_paths[0]]   
     else:
-        return None
+        return sorted_paths
+  
             
-f = open('test-output-newh.txt','a')
+f = open('test-output-newh-3-0.txt','a')
 
 with open('tests.txt') as file:
     for line in file:
@@ -77,10 +78,10 @@ with open('tests.txt') as file:
                     path = p[0]
                     f.write(f'path{count}***********************'+'\n')
                     count+=1
-                    f.write(str(path)+'\n')
+                    # f.write(str(path)+'\n')
                     for stops in path:
                         crime += stops.crime_heuristics
-                        # f.write(str(stops)+'\n')
+                        f.write(str(stops)+'\n')
                     f.write('>>>>>> crime h = '+str(crime)+'<<<<<<<<'+'\n')
                     f.write('>>>>>> transfers_route '+str(p[1])+'<<<<<<<<'+'\n')
                     f.write('>>>>>> transfers_mode '+str(p[2])+'<<<<<<<<'+'\n')
