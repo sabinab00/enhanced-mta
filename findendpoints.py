@@ -107,7 +107,8 @@ def findroutes(access,mode,origin,destination,graph,rad=0.001):
     mixedmode=[]
     for o in originpts:
         for d in destpts:
-            new=((o[0],d[0]),o[1]+d[1])
+           # new=((o[0],d[0]),o[1]+d[1])
+            new=((o[0],d[0]),euclidean(o[0].geocode,d[0].geocode))
             if o[0].transit_type==d[0].transit_type:
                 if o[0].transit_type=='bus':
                     buses.append(new)
