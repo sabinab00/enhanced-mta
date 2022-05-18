@@ -48,12 +48,95 @@ Our algorithm uses A*-algorithm to find paths between two points using the follo
 - `crime_distance`: looks to see if the current stop is in a given radius from the center of a crime cluster. If it is in a danger zone it returns the distance to safety, if it is safe, it returns 0
 
 
-## Usage <a name="usage"></a>
+## Running the program 
 
-You can run the program with the script  `$ py main.py`
-**>>ADD DEMO HERE<<**
+You can run the program with the script  `$ py main.py`. Then the program will ask you for the starting and ending destinations for the path as well as if you wish to have an accessible path and if you have a preferred method of transportation (bus, subway, or both). Here is an example of a user going from Hunter College to CUNY Graduate Center requesting an accessible route with no preference for transit mode.
+```
+What is your starting address?
+>>>695 Park Ave New York, NY, 10065
 
+What is your ending address? 
+>>>365 5th Ave New York, NY 10016
 
+Would you like to request an accessible route (Y/N)? 
+>>>Y
+Do you have a preferred mode of transportion? 
+
+Enter "bus", "subway", or "both".
+>>>both
+```
+Our search will return the top result:
+```
+StopID: B281-MADISON AV/E 69 ST M2-M2-bus LOCAL
+Prev: MADISON AV/E 67 ST-B282    Next: MADISON AV/E 72 ST-B283
+Transfers: ['B258', 'B296', 'B311', 'B366']
+Other: 1, 19.0
+
+StopID: B282-MADISON AV/E 67 ST M2-M2-bus LOCAL
+Prev: MADISON AV/E 66 ST-B289    Next: MADISON AV/E 69 ST-B281
+Transfers: ['B297', 'B312', 'B367']
+Other: 1, 19.0
+
+StopID: B289-MADISON AV/E 66 ST M2-M2-bus LOCAL
+Prev: MADISON AV/E 63 ST-B288    Next: MADISON AV/E 67 ST-B282
+Transfers: ['B303', 'B319', 'B374']
+Other: 1, 19.0
+
+StopID: B288-MADISON AV/E 63 ST M2-M2-bus LOCAL
+Prev: MADISON AV/E 60  ST-B287   Next: MADISON AV/E 66 ST-B289
+Transfers: ['B318', 'B373']
+Other: 1, 19.0
+
+StopID: B287-MADISON AV/E 60  ST M2-M2-bus LOCAL
+Prev: MADISON AV/E 57 ST-B115    Next: MADISON AV/E 63 ST-B288
+Transfers: ['B302', 'B317', 'B372']
+Other: 1, 19.0
+
+StopID: B115-MADISON AV/E 57 ST M2-M2-bus LOCAL
+Prev: MADISON AV/E 55  ST-B118   Next: MADISON AV/E 60  ST-B287
+Transfers: ['B120', 'B125', 'B147']
+Other: 1, 18.0
+
+StopID: B118-MADISON AV/E 55  ST M2-M2-bus LOCAL
+Prev: MADISON AV/E 52 ST-B117    Next: MADISON AV/E 57 ST-B115
+Transfers: ['B123', 'B128', 'B150']
+Other: 1, 18.0
+
+StopID: B117-MADISON AV/E 52 ST M2-M2-bus LOCAL
+Prev: MADISON AV/E 49 ST-B114    Next: MADISON AV/E 55  ST-B118
+Transfers: ['B122', 'B127', 'B149']
+Other: 1, 18.0
+
+StopID: B114-MADISON AV/E 49 ST M2-M2-bus LOCAL
+Prev: MADISON AV/E 45 ST-B116    Next: MADISON AV/E 52 ST-B117
+Transfers: ['B119', 'B124', 'B146']
+Other: 1, 18.0
+
+StopID: B116-MADISON AV/E 45 ST M2-M2-bus LOCAL
+Prev: MADISON AV/E 42 ST-B518    Next: MADISON AV/E 49 ST-B114
+Transfers: ['B121', 'B126', 'B148']
+Other: 1, 18.0
+
+StopID: B518-MADISON AV/E 42 ST M2-M2-bus LOCAL
+Prev: MADISON AV/E 40  ST-B520   Next: MADISON AV/E 45 ST-B116
+Transfers: ['B521', 'B524', 'B546', 'S105']
+Other: 1, 14.0
+
+StopID: B520-MADISON AV/E 40  ST M2-M2-bus LOCAL
+Prev: MADISON AV/E 37 ST-B188    Next: MADISON AV/E 42 ST-B518
+Transfers: ['B523', 'B526', 'B547', 'S105']
+Other: 1, 14.0
+
+StopID: B188-MADISON AV/E 37 ST M2-M2-bus LOCAL
+Prev: MADISON AV/E 34 ST-B187    Next: MADISON AV/E 40  ST-B520
+Transfers: ['B190', 'B192', 'B208']
+Other: 1, 17.0
+
+StopID: B187-MADISON AV/E 34 ST M2-M2-bus LOCAL
+Prev: MADISON AV/E 30 ST-B519    Next: MADISON AV/E 37 ST-B188
+Transfers: ['B189', 'B191', 'B207']
+Other: 1, 17.0
+```
 
 ## Authors <a name = "authors"></a>
 
