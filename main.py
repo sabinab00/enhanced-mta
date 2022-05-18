@@ -4,7 +4,7 @@ import findendpoints as fep
 import helper
 
 def main():
-    g = Graph()
+   
 
     #origin point and destination point
 
@@ -12,12 +12,14 @@ def main():
     end = input('What is your ending address? \n>>>')
     access = input('Would you like to request an accessible route (Y/N)? \n>>>')
     mode = input('Do you have a preferred mode of transportion? \nEnter "bus", "subway", or "both". \n>>>')
+    
 
     found_stops = False
     found_path = False
     rad = 0.002
     paths_found = []
-
+    print('Generating search space...')
+    g = Graph()
     print('Finding best routes for you...')
     while not found_stops or not found_path:
         print(rad)
@@ -40,29 +42,32 @@ def main():
                     found_path = True
                                 
         rad += 0.0005
-        if len(paths_found)<4:
-            # ensures we have three or more paths to sort and pick from
-            found_path=False
-            found_stops=False
+        # if len(paths_found)<4:
+        #     # ensures we have three or more paths to sort and pick from
+        #     found_path=False
+        #     found_stops=False
 
     # sorts the paths found by
     #   (1) number of modal transfers
     #   (2) number of stops passed through
     #   (3) number of route transfers
-    if rad <0.005:
+    if paths_found:
         sorted_paths  = helper.findTopPath(paths_found)
-        print(f'We found {len(sorted_paths)} routes, here are the top 3:')
-        for path in sorted_paths[:3]:
+        print(f'We found {len(sorted_paths)} routes, this is the top result:')
+        for path in [sorted_paths[0]]:
             print('------------')
             p = path[0]
             # print(len(p), path[1], path[2])
-            # print(p)
+            print(p)
             # sum = 0
             # for i in p:
             #     sum+=i.crime_heuristics
             # print('crimeh:',sum)
         # print(len(paths_found))
+    else:
+        print(f"We're sorry, we could not find the path from:\n{start} to {end} with your specific accessibility and modal request.")
 
-    print(str(p))
+    
 if __name__=='__main__':
+
     main()
