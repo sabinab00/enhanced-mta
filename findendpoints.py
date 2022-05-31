@@ -24,7 +24,7 @@ def getsubwayroutes(subways):
     same_sub=[]
     diff_sub=[]
     for s in subways:
-        new=((s[0][0],s[0][1]),s[1],colors[s[0][0].route_id]!=colors[s[0][1].route_id],2-s[0][0].express-s[0][0].express)
+        new=((s[0][0],s[0][1]),s[1],s[0][0].line!=s[0][1].line,2-s[0][0].express-s[0][1].express)
         if s[0][0].route_id==s[0][1].route_id:
             if new not in same_sub:
                 same_sub.append(new)
@@ -63,48 +63,40 @@ def findroutes(access,mode,origin,destination,graph,rad=0.001):
     
     #finds nearby origin stops
     originpts=[]
+    destpts = []
     for x in graph.stopIDs:
         node=graph.getStop(x)
-        new=(node,euclidean(loc,node.geocode))
-        if new not in originpts:
-            originpts.append(new)
-    for x in graph.stopIDs:
-        node=graph.getStop(x)
-        new=(node,euclidean(loc,node.geocode))
-        if new not in originpts:
-            originpts.append(new)
+        node_accessibility = node.accessibility
+        add_node_access_flag = False
+        if access == 'N' or access== 'n':
+            add_node_access_flag = True
+        else:
+            if node_accessibility !=0:
+                add_node_access_flag = True
 
-    #finds nearby destination stops
-    destpts=[]
-    for x in graph.stopIDs:
-        node=graph.getStop(x)
-        new=(node,euclidean(loc2,node.geocode))
-        if new not in destpts:
-            destpts.append(new)
-    for x in graph.stopIDs:
-        node=graph.getStop(x)
-        new=(node,euclidean(loc2,node.geocode))
-        if new not in destpts:
-            destpts.append(new)
+        distance2origin = euclidean(loc, node.geocode)
+        distance2dest = euclidean(loc2, node.geocode)
+       
+        if distance2origin<=rad and add_node_access_flag==True:
+            new=(node,distance2origin)
+            if new not in originpts:
+                originpts.append(new)
+
+        if distance2dest<=rad and add_node_access_flag==True:
+            new=(node,distance2dest)
+            if new not in destpts:
+                destpts.append(new)
 
     #shortens origin and destination list based on radius
-    originpts=[x for x in originpts if x[1]<=rad]
-    destpts=[x for x in destpts if x[1]<=rad]
     if len(originpts)==0 or len(destpts)==0:
         print(f"Radius {rad} is too small")
         return []
-
-    if access=="Y" or access=="y":
-        originpts=accessible(originpts)
-        destpts=accessible(destpts)
-        if len(originpts)==0 or len(destpts)==0:
-            print("No Accessible Routes")
-            return []
 
     #separates routes by transportation type   
     subways=[]
     buses=[]
     mixedmode=[]
+    # print(f'There are {len(originpts)} starting and {len(destpts)} ending')
     for o in originpts:
         for d in destpts:
             new=((o[0],d[0]),o[1]+d[1])
@@ -117,16 +109,20 @@ def findroutes(access,mode,origin,destination,graph,rad=0.001):
             else:
                 mixedmode.append(new)
 
+    # print(f'bus {len(buses)}')
+    # print(f'subs {len(subways)}')
+    # print(f'mixed {len(mixedmode)}')
+
     if mode=="bus":
        samebus,diffbus=getbusroutes(buses)
        samebus.sort(key=lambda x: (x[1]))
-       diffbus.sort(key=lambda x:(x[1]))
+       diffbus.sort(key=lambda x: (x[1]))
        return samebus+diffbus
 
     elif mode=="subway":
         samesub,diffsub=getsubwayroutes(subways)
         samesub.sort(key=lambda x:(x[1]))
-        diffsub.sort(key=lambda x:(x[1],x[2]))
+        diffsub.sort(key=lambda x:(x[1],x[2],x[3]))
         return samesub+diffsub
     
     else:
@@ -140,23 +136,23 @@ def findroutes(access,mode,origin,destination,graph,rad=0.001):
         sameroutes.sort(key=lambda x:(x[1]))
     
         #sorts diffrent routes by distance
-            #diffsub sorted by color, distance and express
+            #diffsub sorted by distance line and express
             #diffbus sorted by distance
-        diffroutes=[]
+
+        
         diffsub.sort(key=lambda x:(x[2],x[1],x[3]))
         diffbus.sort(key=lambda x:(x[1]))
-        for graph in diffsub:
-            for graph in diffbus:
-                if graph[1]>graph[1] and graph not in diffroutes:
-                    diffroutes.append(graph)
-                elif graph[1]<=graph[1] and graph not in diffroutes:
-                    diffroutes.append(graph)
+        diffroutes = diffbus+diffsub
 
         #mixed mode sorted by distance
-        mixedmode.sort(key=lambda x:(x[1]))
-    
+        # mixedmode.sort(key=lambda x:(x[1]))
+        print(f'same {len(sameroutes)}')
+        print(f'diff {len(diffroutes)}')
+        print(f'mixed {len(mixedmode)}')
+
+        
         # combines all modes together and sorts by distance
-        allmodes = sameroutes+diffroutes+mixedmode
+        allmodes = mixedmode+sameroutes+diffroutes
         allmodes.sort(key=lambda x:(x[1]))   
     
         return allmodes
